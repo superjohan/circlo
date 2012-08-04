@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* CircloAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CircloAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* CircloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* CircloViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* CircloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* CircloViewController.m */; };
+		90091B801377151C000E3143 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90091B7F1377151C000E3143 /* MainWindow-iPad.xib */; };
+		90091B9213771588000E3143 /* LayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90091B9113771588000E3143 /* LayoutManager.m */; };
+		904113F1154BF9BD006503EB /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904113F0154BF9BD006503EB /* Icon-72@2x.png */; };
+		904113F3154BFB63006503EB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 904113F2154BFB63006503EB /* Default.png */; };
+		904113F5154BFB68006503EB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904113F4154BFB68006503EB /* Default@2x.png */; };
+		904113F7154BFB73006503EB /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 904113F6154BFB73006503EB /* Default-Portrait~ipad.png */; };
+		904113F9154BFB77006503EB /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 904113F8154BFB77006503EB /* Default-Portrait@2x~ipad.png */; };
+		9047572013AF0AD8001A6769 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 9047571B13AF0AD8001A6769 /* Icon-72.png */; };
+		9047572113AF0AD8001A6769 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9047571C13AF0AD8001A6769 /* Icon.png */; };
+		9047572213AF0AD8001A6769 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9047571D13AF0AD8001A6769 /* Icon@2x.png */; };
+		9052857E13C7291C0041EAD0 /* bg.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9052857D13C7291C0041EAD0 /* bg.m4a */; };
+		9063BE5A139B763600DC6E84 /* ReactiveCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9063BE59139B763600DC6E84 /* ReactiveCircleView.m */; };
+		90A385A71372630000D25965 /* PulseCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A385A61372630000D25965 /* PulseCircleView.m */; };
+		90E064B913A871B400E7F1E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E064B813A871B400E7F1E6 /* QuartzCore.framework */; };
+		90E21751139E6E7E00621116 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21750139E6E7E00621116 /* Circle.m */; };
+		90E21754139E714300621116 /* AbstractCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21753139E714300621116 /* AbstractCircle.m */; };
+		90E7145B13B22C7C00BDE5B2 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E7145A13B22C7C00BDE5B2 /* MenuView.m */; };
+		90E9049913B2FD5B0055FBF0 /* ColorSchemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E9049813B2FD5B0055FBF0 /* ColorSchemeManager.m */; };
+		90E9049C13B2FE220055FBF0 /* ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E9049B13B2FE220055FBF0 /* ColorScheme.m */; };
+		90F1280713B997530071C83B /* Sniglet_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90F1280613B997530071C83B /* Sniglet_Regular.ttf */; };
+		90F1280A13B999DB0071C83B /* CircloConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1280913B999DB0071C83B /* CircloConstants.m */; };
+		90F2D27413BB68EF00DC0827 /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D26C13BB68EF00DC0827 /* CDAudioManager.m */; };
+		90F2D27513BB68EF00DC0827 /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D26F13BB68EF00DC0827 /* CDOpenALSupport.m */; };
+		90F2D27613BB68EF00DC0827 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D27113BB68EF00DC0827 /* CocosDenshion.m */; };
+		90F2D27713BB68EF00DC0827 /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D27313BB68EF00DC0827 /* SimpleAudioEngine.m */; };
+		90F2D27C13BB696400DC0827 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2D27B13BB696400DC0827 /* AVFoundation.framework */; };
+		90F2D27E13BB696C00DC0827 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2D27D13BB696C00DC0827 /* AudioToolbox.framework */; };
+		90F2D28A13BB69CE00DC0827 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2D28913BB69CE00DC0827 /* OpenAL.framework */; };
+		90F2D2AA13BB70BF00DC0827 /* 1-1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D28C13BB70BF00DC0827 /* 1-1.caf */; };
+		90F2D2AB13BB70BF00DC0827 /* 1-2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D28D13BB70BF00DC0827 /* 1-2.caf */; };
+		90F2D2AC13BB70BF00DC0827 /* 1-3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D28E13BB70BF00DC0827 /* 1-3.caf */; };
+		90F2D2AD13BB70BF00DC0827 /* 1-4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D28F13BB70BF00DC0827 /* 1-4.caf */; };
+		90F2D2AE13BB70BF00DC0827 /* 1-5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29013BB70BF00DC0827 /* 1-5.caf */; };
+		90F2D2AF13BB70BF00DC0827 /* 1-6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29113BB70BF00DC0827 /* 1-6.caf */; };
+		90F2D2B013BB70BF00DC0827 /* 1-7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29213BB70BF00DC0827 /* 1-7.caf */; };
+		90F2D2B113BB70BF00DC0827 /* 1-8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29313BB70BF00DC0827 /* 1-8.caf */; };
+		90F2D2B213BB70BF00DC0827 /* 1-9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29413BB70BF00DC0827 /* 1-9.caf */; };
+		90F2D2B313BB70BF00DC0827 /* 1-10.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29513BB70BF00DC0827 /* 1-10.caf */; };
+		90F2D2B413BB70BF00DC0827 /* 1-11.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29613BB70BF00DC0827 /* 1-11.caf */; };
+		90F2D2B513BB70BF00DC0827 /* 1-12.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29713BB70BF00DC0827 /* 1-12.caf */; };
+		90F2D2B613BB70BF00DC0827 /* 2-1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29813BB70BF00DC0827 /* 2-1.caf */; };
+		90F2D2B713BB70BF00DC0827 /* 2-2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29913BB70BF00DC0827 /* 2-2.caf */; };
+		90F2D2B813BB70BF00DC0827 /* 3-1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29A13BB70BF00DC0827 /* 3-1.caf */; };
+		90F2D2B913BB70BF00DC0827 /* 3-2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29B13BB70BF00DC0827 /* 3-2.caf */; };
+		90F2D2BA13BB70BF00DC0827 /* 3-3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29C13BB70BF00DC0827 /* 3-3.caf */; };
+		90F2D2BB13BB70BF00DC0827 /* 3-4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29D13BB70BF00DC0827 /* 3-4.caf */; };
+		90F2D2BC13BB70BF00DC0827 /* 3-5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29E13BB70BF00DC0827 /* 3-5.caf */; };
+		90F2D2BD13BB70BF00DC0827 /* 3-6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D29F13BB70BF00DC0827 /* 3-6.caf */; };
+		90F2D2BE13BB70BF00DC0827 /* 4-1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D2A013BB70BF00DC0827 /* 4-1.caf */; };
+		90F2D2BF13BB70BF00DC0827 /* 4-2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D2A113BB70BF00DC0827 /* 4-2.caf */; };
+		90F2D2C013BB70BF00DC0827 /* 4-3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D2A213BB70BF00DC0827 /* 4-3.caf */; };
+		90F2D2C113BB70BF00DC0827 /* 4-4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D2A313BB70BF00DC0827 /* 4-4.caf */; };
+		90F2D2C213BB70BF00DC0827 /* 4-5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D2A413BB70BF00DC0827 /* 4-5.caf */; };
+		90F2D2C313BB70BF00DC0827 /* 4-6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D2A513BB70BF00DC0827 /* 4-6.caf */; };
+		90F2D2C413BB70BF00DC0827 /* 4-7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D2A613BB70BF00DC0827 /* 4-7.caf */; };
+		90F2D2C513BB70BF00DC0827 /* 4-8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D2A713BB70BF00DC0827 /* 4-8.caf */; };
+		90F2D2C613BB70BF00DC0827 /* 4-9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D2A813BB70BF00DC0827 /* 4-9.caf */; };
+		90F2D2C713BB70BF00DC0827 /* 4-10.caf in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D2A913BB70BF00DC0827 /* 4-10.caf */; };
+		90F2D2CA13BB711600DC0827 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D2C913BB711600DC0827 /* SoundManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* CircloAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircloAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* CircloAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircloAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Circlo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circlo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* CircloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircloViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* CircloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircloViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* CircloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircloViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Circlo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circlo_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Circlo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Circlo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		90091B7F1377151C000E3143 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		90091B9013771588000E3143 /* LayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutManager.h; sourceTree = "<group>"; };
+		90091B9113771588000E3143 /* LayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutManager.m; sourceTree = "<group>"; };
+		904113F0154BF9BD006503EB /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../../Icon-72@2x.png"; sourceTree = "<group>"; };
+		904113F2154BFB63006503EB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		904113F4154BFB68006503EB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		904113F6154BFB73006503EB /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		904113F8154BFB77006503EB /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		9047571B13AF0AD8001A6769 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		9047571C13AF0AD8001A6769 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		9047571D13AF0AD8001A6769 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		9052857D13C7291C0041EAD0 /* bg.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg.m4a; sourceTree = "<group>"; };
+		9063BE58139B763600DC6E84 /* ReactiveCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactiveCircleView.h; sourceTree = "<group>"; };
+		9063BE59139B763600DC6E84 /* ReactiveCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactiveCircleView.m; sourceTree = "<group>"; };
+		90A385A51372630000D25965 /* PulseCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseCircleView.h; sourceTree = "<group>"; };
+		90A385A61372630000D25965 /* PulseCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseCircleView.m; sourceTree = "<group>"; };
+		90E064B813A871B400E7F1E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		90E2174F139E6E7E00621116 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		90E21750139E6E7E00621116 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
+		90E21752139E714300621116 /* AbstractCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractCircle.h; sourceTree = "<group>"; };
+		90E21753139E714300621116 /* AbstractCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractCircle.m; sourceTree = "<group>"; };
+		90E7145913B22C7C00BDE5B2 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		90E7145A13B22C7C00BDE5B2 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		90E9049713B2FD5B0055FBF0 /* ColorSchemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSchemeManager.h; sourceTree = "<group>"; };
+		90E9049813B2FD5B0055FBF0 /* ColorSchemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSchemeManager.m; sourceTree = "<group>"; };
+		90E9049A13B2FE220055FBF0 /* ColorScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorScheme.h; sourceTree = "<group>"; };
+		90E9049B13B2FE220055FBF0 /* ColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorScheme.m; sourceTree = "<group>"; };
+		90F1280613B997530071C83B /* Sniglet_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sniglet_Regular.ttf; sourceTree = "<group>"; };
+		90F1280813B999DB0071C83B /* CircloConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircloConstants.h; sourceTree = "<group>"; };
+		90F1280913B999DB0071C83B /* CircloConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircloConstants.m; sourceTree = "<group>"; };
+		90F2D26B13BB68EF00DC0827 /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
+		90F2D26C13BB68EF00DC0827 /* CDAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAudioManager.m; sourceTree = "<group>"; };
+		90F2D26D13BB68EF00DC0827 /* CDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConfig.h; sourceTree = "<group>"; };
+		90F2D26E13BB68EF00DC0827 /* CDOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOpenALSupport.h; sourceTree = "<group>"; };
+		90F2D26F13BB68EF00DC0827 /* CDOpenALSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDOpenALSupport.m; sourceTree = "<group>"; };
+		90F2D27013BB68EF00DC0827 /* CocosDenshion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosDenshion.h; sourceTree = "<group>"; };
+		90F2D27113BB68EF00DC0827 /* CocosDenshion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocosDenshion.m; sourceTree = "<group>"; };
+		90F2D27213BB68EF00DC0827 /* SimpleAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine.h; sourceTree = "<group>"; };
+		90F2D27313BB68EF00DC0827 /* SimpleAudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine.m; sourceTree = "<group>"; };
+		90F2D27B13BB696400DC0827 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		90F2D27D13BB696C00DC0827 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		90F2D27F13BB697700DC0827 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		90F2D28113BB699100DC0827 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		90F2D28913BB69CE00DC0827 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		90F2D28C13BB70BF00DC0827 /* 1-1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-1.caf"; sourceTree = "<group>"; };
+		90F2D28D13BB70BF00DC0827 /* 1-2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-2.caf"; sourceTree = "<group>"; };
+		90F2D28E13BB70BF00DC0827 /* 1-3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-3.caf"; sourceTree = "<group>"; };
+		90F2D28F13BB70BF00DC0827 /* 1-4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-4.caf"; sourceTree = "<group>"; };
+		90F2D29013BB70BF00DC0827 /* 1-5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-5.caf"; sourceTree = "<group>"; };
+		90F2D29113BB70BF00DC0827 /* 1-6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-6.caf"; sourceTree = "<group>"; };
+		90F2D29213BB70BF00DC0827 /* 1-7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-7.caf"; sourceTree = "<group>"; };
+		90F2D29313BB70BF00DC0827 /* 1-8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-8.caf"; sourceTree = "<group>"; };
+		90F2D29413BB70BF00DC0827 /* 1-9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-9.caf"; sourceTree = "<group>"; };
+		90F2D29513BB70BF00DC0827 /* 1-10.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-10.caf"; sourceTree = "<group>"; };
+		90F2D29613BB70BF00DC0827 /* 1-11.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-11.caf"; sourceTree = "<group>"; };
+		90F2D29713BB70BF00DC0827 /* 1-12.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-12.caf"; sourceTree = "<group>"; };
+		90F2D29813BB70BF00DC0827 /* 2-1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-1.caf"; sourceTree = "<group>"; };
+		90F2D29913BB70BF00DC0827 /* 2-2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-2.caf"; sourceTree = "<group>"; };
+		90F2D29A13BB70BF00DC0827 /* 3-1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-1.caf"; sourceTree = "<group>"; };
+		90F2D29B13BB70BF00DC0827 /* 3-2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-2.caf"; sourceTree = "<group>"; };
+		90F2D29C13BB70BF00DC0827 /* 3-3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-3.caf"; sourceTree = "<group>"; };
+		90F2D29D13BB70BF00DC0827 /* 3-4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-4.caf"; sourceTree = "<group>"; };
+		90F2D29E13BB70BF00DC0827 /* 3-5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-5.caf"; sourceTree = "<group>"; };
+		90F2D29F13BB70BF00DC0827 /* 3-6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-6.caf"; sourceTree = "<group>"; };
+		90F2D2A013BB70BF00DC0827 /* 4-1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-1.caf"; sourceTree = "<group>"; };
+		90F2D2A113BB70BF00DC0827 /* 4-2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-2.caf"; sourceTree = "<group>"; };
+		90F2D2A213BB70BF00DC0827 /* 4-3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-3.caf"; sourceTree = "<group>"; };
+		90F2D2A313BB70BF00DC0827 /* 4-4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-4.caf"; sourceTree = "<group>"; };
+		90F2D2A413BB70BF00DC0827 /* 4-5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-5.caf"; sourceTree = "<group>"; };
+		90F2D2A513BB70BF00DC0827 /* 4-6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-6.caf"; sourceTree = "<group>"; };
+		90F2D2A613BB70BF00DC0827 /* 4-7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-7.caf"; sourceTree = "<group>"; };
+		90F2D2A713BB70BF00DC0827 /* 4-8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-8.caf"; sourceTree = "<group>"; };
+		90F2D2A813BB70BF00DC0827 /* 4-9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-9.caf"; sourceTree = "<group>"; };
+		90F2D2A913BB70BF00DC0827 /* 4-10.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-10.caf"; sourceTree = "<group>"; };
+		90F2D2C813BB711600DC0827 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		90F2D2C913BB711600DC0827 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F2D28A13BB69CE00DC0827 /* OpenAL.framework in Frameworks */,
+				90F2D27E13BB696C00DC0827 /* AudioToolbox.framework in Frameworks */,
+				90F2D27C13BB696400DC0827 /* AVFoundation.framework in Frameworks */,
+				90E064B913A871B400E7F1E6 /* QuartzCore.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				90E9049D13B2FE270055FBF0 /* Model */,
+				90D3FE7E13B0DFF900422A56 /* Views */,
+				90D3FE7F13B0E02500422A56 /* View controllers */,
+				90E9049613B2FD3F0055FBF0 /* Helpers */,
+				1D3623240D0F684500981E51 /* CircloAppDelegate.h */,
+				1D3623250D0F684500981E51 /* CircloAppDelegate.m */,
+				90F1280813B999DB0071C83B /* CircloConstants.h */,
+				90F1280913B999DB0071C83B /* CircloConstants.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Circlo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				904113F8154BFB77006503EB /* Default-Portrait@2x~ipad.png */,
+				904113F6154BFB73006503EB /* Default-Portrait~ipad.png */,
+				904113F4154BFB68006503EB /* Default@2x.png */,
+				904113F2154BFB63006503EB /* Default.png */,
+				90F2D26A13BB68EF00DC0827 /* CocosDenshion */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				90091B7E1377151A000E3143 /* Resources-iPad */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Circlo_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				90B571241491561D00C70A04 /* XIBs */,
+				90B57123149155F200C70A04 /* Images */,
+				90F2D28B13BB70A400DC0827 /* Sounds */,
+				90F1280613B997530071C83B /* Sniglet_Regular.ttf */,
+				8D1107310486CEB800E47090 /* Circlo-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D28913BB69CE00DC0827 /* OpenAL.framework */,
+				90F2D28113BB699100DC0827 /* MediaPlayer.framework */,
+				90F2D27F13BB697700DC0827 /* CoreAudio.framework */,
+				90F2D27D13BB696C00DC0827 /* AudioToolbox.framework */,
+				90F2D27B13BB696400DC0827 /* AVFoundation.framework */,
+				90E064B813A871B400E7F1E6 /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90091B7E1377151A000E3143 /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Resources-iPad";
+			sourceTree = "<group>";
+		};
+		90B57123149155F200C70A04 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				904113F0154BF9BD006503EB /* Icon-72@2x.png */,
+				9047571B13AF0AD8001A6769 /* Icon-72.png */,
+				9047571C13AF0AD8001A6769 /* Icon.png */,
+				9047571D13AF0AD8001A6769 /* Icon@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		90B571241491561D00C70A04 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				90091B7F1377151C000E3143 /* MainWindow-iPad.xib */,
+				2899E5210DE3E06400AC0155 /* CircloViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		90D3FE7E13B0DFF900422A56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90E21752139E714300621116 /* AbstractCircle.h */,
+				90E21753139E714300621116 /* AbstractCircle.m */,
+				90E2174F139E6E7E00621116 /* Circle.h */,
+				90E21750139E6E7E00621116 /* Circle.m */,
+				90A385A51372630000D25965 /* PulseCircleView.h */,
+				90A385A61372630000D25965 /* PulseCircleView.m */,
+				9063BE58139B763600DC6E84 /* ReactiveCircleView.h */,
+				9063BE59139B763600DC6E84 /* ReactiveCircleView.m */,
+				90E7145913B22C7C00BDE5B2 /* MenuView.h */,
+				90E7145A13B22C7C00BDE5B2 /* MenuView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		90D3FE7F13B0E02500422A56 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28D7ACF60DDB3853001CB0EB /* CircloViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* CircloViewController.m */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		90E9049613B2FD3F0055FBF0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				90091B9013771588000E3143 /* LayoutManager.h */,
+				90091B9113771588000E3143 /* LayoutManager.m */,
+				90E9049713B2FD5B0055FBF0 /* ColorSchemeManager.h */,
+				90E9049813B2FD5B0055FBF0 /* ColorSchemeManager.m */,
+				90F2D2C813BB711600DC0827 /* SoundManager.h */,
+				90F2D2C913BB711600DC0827 /* SoundManager.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		90E9049D13B2FE270055FBF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90E9049A13B2FE220055FBF0 /* ColorScheme.h */,
+				90E9049B13B2FE220055FBF0 /* ColorScheme.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		90F2D26A13BB68EF00DC0827 /* CocosDenshion */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D26B13BB68EF00DC0827 /* CDAudioManager.h */,
+				90F2D26C13BB68EF00DC0827 /* CDAudioManager.m */,
+				90F2D26D13BB68EF00DC0827 /* CDConfig.h */,
+				90F2D26E13BB68EF00DC0827 /* CDOpenALSupport.h */,
+				90F2D26F13BB68EF00DC0827 /* CDOpenALSupport.m */,
+				90F2D27013BB68EF00DC0827 /* CocosDenshion.h */,
+				90F2D27113BB68EF00DC0827 /* CocosDenshion.m */,
+				90F2D27213BB68EF00DC0827 /* SimpleAudioEngine.h */,
+				90F2D27313BB68EF00DC0827 /* SimpleAudioEngine.m */,
+			);
+			path = CocosDenshion;
+			sourceTree = "<group>";
+		};
+		90F2D28B13BB70A400DC0827 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9052857D13C7291C0041EAD0 /* bg.m4a */,
+				90F2D28C13BB70BF00DC0827 /* 1-1.caf */,
+				90F2D28D13BB70BF00DC0827 /* 1-2.caf */,
+				90F2D28E13BB70BF00DC0827 /* 1-3.caf */,
+				90F2D28F13BB70BF00DC0827 /* 1-4.caf */,
+				90F2D29013BB70BF00DC0827 /* 1-5.caf */,
+				90F2D29113BB70BF00DC0827 /* 1-6.caf */,
+				90F2D29213BB70BF00DC0827 /* 1-7.caf */,
+				90F2D29313BB70BF00DC0827 /* 1-8.caf */,
+				90F2D29413BB70BF00DC0827 /* 1-9.caf */,
+				90F2D29513BB70BF00DC0827 /* 1-10.caf */,
+				90F2D29613BB70BF00DC0827 /* 1-11.caf */,
+				90F2D29713BB70BF00DC0827 /* 1-12.caf */,
+				90F2D29813BB70BF00DC0827 /* 2-1.caf */,
+				90F2D29913BB70BF00DC0827 /* 2-2.caf */,
+				90F2D29A13BB70BF00DC0827 /* 3-1.caf */,
+				90F2D29B13BB70BF00DC0827 /* 3-2.caf */,
+				90F2D29C13BB70BF00DC0827 /* 3-3.caf */,
+				90F2D29D13BB70BF00DC0827 /* 3-4.caf */,
+				90F2D29E13BB70BF00DC0827 /* 3-5.caf */,
+				90F2D29F13BB70BF00DC0827 /* 3-6.caf */,
+				90F2D2A013BB70BF00DC0827 /* 4-1.caf */,
+				90F2D2A113BB70BF00DC0827 /* 4-2.caf */,
+				90F2D2A213BB70BF00DC0827 /* 4-3.caf */,
+				90F2D2A313BB70BF00DC0827 /* 4-4.caf */,
+				90F2D2A413BB70BF00DC0827 /* 4-5.caf */,
+				90F2D2A513BB70BF00DC0827 /* 4-6.caf */,
+				90F2D2A613BB70BF00DC0827 /* 4-7.caf */,
+				90F2D2A713BB70BF00DC0827 /* 4-8.caf */,
+				90F2D2A813BB70BF00DC0827 /* 4-9.caf */,
+				90F2D2A913BB70BF00DC0827 /* 4-10.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Circlo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Circlo" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Circlo;
+			productName = Circlo;
+			productReference = 1D6058910D05DD3D006BFB54 /* Circlo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Aero Deko";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Circlo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Circlo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* CircloViewController.xib in Resources */,
+				90091B801377151C000E3143 /* MainWindow-iPad.xib in Resources */,
+				9047572013AF0AD8001A6769 /* Icon-72.png in Resources */,
+				9047572113AF0AD8001A6769 /* Icon.png in Resources */,
+				9047572213AF0AD8001A6769 /* Icon@2x.png in Resources */,
+				90F1280713B997530071C83B /* Sniglet_Regular.ttf in Resources */,
+				90F2D2AA13BB70BF00DC0827 /* 1-1.caf in Resources */,
+				90F2D2AB13BB70BF00DC0827 /* 1-2.caf in Resources */,
+				90F2D2AC13BB70BF00DC0827 /* 1-3.caf in Resources */,
+				90F2D2AD13BB70BF00DC0827 /* 1-4.caf in Resources */,
+				90F2D2AE13BB70BF00DC0827 /* 1-5.caf in Resources */,
+				90F2D2AF13BB70BF00DC0827 /* 1-6.caf in Resources */,
+				90F2D2B013BB70BF00DC0827 /* 1-7.caf in Resources */,
+				90F2D2B113BB70BF00DC0827 /* 1-8.caf in Resources */,
+				90F2D2B213BB70BF00DC0827 /* 1-9.caf in Resources */,
+				90F2D2B313BB70BF00DC0827 /* 1-10.caf in Resources */,
+				90F2D2B413BB70BF00DC0827 /* 1-11.caf in Resources */,
+				90F2D2B513BB70BF00DC0827 /* 1-12.caf in Resources */,
+				90F2D2B613BB70BF00DC0827 /* 2-1.caf in Resources */,
+				90F2D2B713BB70BF00DC0827 /* 2-2.caf in Resources */,
+				90F2D2B813BB70BF00DC0827 /* 3-1.caf in Resources */,
+				90F2D2B913BB70BF00DC0827 /* 3-2.caf in Resources */,
+				90F2D2BA13BB70BF00DC0827 /* 3-3.caf in Resources */,
+				90F2D2BB13BB70BF00DC0827 /* 3-4.caf in Resources */,
+				90F2D2BC13BB70BF00DC0827 /* 3-5.caf in Resources */,
+				90F2D2BD13BB70BF00DC0827 /* 3-6.caf in Resources */,
+				90F2D2BE13BB70BF00DC0827 /* 4-1.caf in Resources */,
+				90F2D2BF13BB70BF00DC0827 /* 4-2.caf in Resources */,
+				90F2D2C013BB70BF00DC0827 /* 4-3.caf in Resources */,
+				90F2D2C113BB70BF00DC0827 /* 4-4.caf in Resources */,
+				90F2D2C213BB70BF00DC0827 /* 4-5.caf in Resources */,
+				90F2D2C313BB70BF00DC0827 /* 4-6.caf in Resources */,
+				90F2D2C413BB70BF00DC0827 /* 4-7.caf in Resources */,
+				90F2D2C513BB70BF00DC0827 /* 4-8.caf in Resources */,
+				90F2D2C613BB70BF00DC0827 /* 4-9.caf in Resources */,
+				90F2D2C713BB70BF00DC0827 /* 4-10.caf in Resources */,
+				9052857E13C7291C0041EAD0 /* bg.m4a in Resources */,
+				904113F1154BF9BD006503EB /* Icon-72@2x.png in Resources */,
+				904113F3154BFB63006503EB /* Default.png in Resources */,
+				904113F5154BFB68006503EB /* Default@2x.png in Resources */,
+				904113F7154BFB73006503EB /* Default-Portrait~ipad.png in Resources */,
+				904113F9154BFB77006503EB /* Default-Portrait@2x~ipad.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* CircloAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* CircloViewController.m in Sources */,
+				90A385A71372630000D25965 /* PulseCircleView.m in Sources */,
+				90091B9213771588000E3143 /* LayoutManager.m in Sources */,
+				9063BE5A139B763600DC6E84 /* ReactiveCircleView.m in Sources */,
+				90E21751139E6E7E00621116 /* Circle.m in Sources */,
+				90E21754139E714300621116 /* AbstractCircle.m in Sources */,
+				90E7145B13B22C7C00BDE5B2 /* MenuView.m in Sources */,
+				90E9049913B2FD5B0055FBF0 /* ColorSchemeManager.m in Sources */,
+				90E9049C13B2FE220055FBF0 /* ColorScheme.m in Sources */,
+				90F1280A13B999DB0071C83B /* CircloConstants.m in Sources */,
+				90F2D27413BB68EF00DC0827 /* CDAudioManager.m in Sources */,
+				90F2D27513BB68EF00DC0827 /* CDOpenALSupport.m in Sources */,
+				90F2D27613BB68EF00DC0827 /* CocosDenshion.m in Sources */,
+				90F2D27713BB68EF00DC0827 /* SimpleAudioEngine.m in Sources */,
+				90F2D2CA13BB711600DC0827 /* SoundManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Circlo_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				INFOPLIST_FILE = "Resources/Circlo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = Circlo;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Circlo_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				INFOPLIST_FILE = "Resources/Circlo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = Circlo;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9070239713CA1823004BBB67 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		9070239813CA1823004BBB67 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Circlo_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				INFOPLIST_FILE = "Resources/Circlo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = Circlo;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Circlo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				9070239813CA1823004BBB67 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Circlo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				9070239713CA1823004BBB67 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
