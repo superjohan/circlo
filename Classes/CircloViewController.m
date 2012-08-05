@@ -338,8 +338,6 @@ static const NSInteger kPMTag = 14;
 - (void)dealloc 
 {
 	[self _stopTimer];
-	
-	
 }
 
 
