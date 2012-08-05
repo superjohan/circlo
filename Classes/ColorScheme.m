@@ -14,14 +14,14 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 
 @implementation ColorScheme
 
-#pragma mark Synthesizes
+#pragma mark - Synthesizes
 
 @synthesize primaryColor;
 @synthesize secondaryColor;
 @synthesize colorSchemeType;
 
 
-#pragma mark Private
+#pragma mark - Private
 
 - (UIColor *)_primaryColorForColorScheme:(CircloColorSchemeType)schemeType
 {
@@ -77,7 +77,7 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 }
 
 
-#pragma mark Public
+#pragma mark - Public
 
 - (id)initWithColorScheme:(CircloColorSchemeType)schemeType
 {

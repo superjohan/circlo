@@ -10,7 +10,7 @@
 
 @implementation Circle
 
-#pragma mark Public
+#pragma mark - Public
 
 - (id)initWithFrame:(CGRect)frame 
 {

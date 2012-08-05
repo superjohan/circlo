@@ -28,8 +28,7 @@
 
 @implementation CircloViewController
 
-#pragma mark -
-#pragma mark Synthesizes
+#pragma mark - Synthesizes
 
 @synthesize timer;
 @synthesize hours;
@@ -41,16 +40,14 @@
 @synthesize minuteFormatter;
 
 
-#pragma mark -
-#pragma mark Constants
+#pragma mark - Constants
 
 static const NSInteger kMaxHoursTag = 13;
 static const NSInteger kAMTag = 13;
 static const NSInteger kPMTag = 14;
 
 
-#pragma mark -
-#pragma mark Private
+#pragma mark - Private
 
 - (NSString *)_buttonTextForTag:(NSInteger)tag
 {
@@ -269,8 +266,7 @@ static const NSInteger kPMTag = 14;
 }
 
 
-#pragma mark -
-#pragma mark MenuViewDelegate
+#pragma mark - MenuViewDelegate
 
 - (void)overlayButtonTouchedInMenuView:(MenuView *)menuView
 {
@@ -290,8 +286,7 @@ static const NSInteger kPMTag = 14;
 }
 
 
-#pragma mark -
-#pragma mark Public
+#pragma mark - Public
 
 - (void)viewDidLoad 
 {

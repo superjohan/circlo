@@ -14,7 +14,7 @@
 
 @implementation ReactiveCircleView
 
-#pragma mark Private
+#pragma mark - Private
 
 - (double)_distanceFromPoint:(CGPoint)originPoint toPoint:(CGPoint)destinationPoint
 {
@@ -128,7 +128,7 @@
 	}
 }
 
-#pragma mark Public
+#pragma mark - Public
 
 - (id)initWithFrame:(CGRect)frame
 {

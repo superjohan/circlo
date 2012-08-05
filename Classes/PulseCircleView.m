@@ -22,8 +22,7 @@
 
 @implementation PulseCircleView
 
-#pragma mark -
-#pragma mark Synthesizes
+#pragma mark - Synthesizes
 
 @synthesize circle1;
 @synthesize circle2;
@@ -42,14 +41,12 @@
 @synthesize selected;
 
 
-#pragma mark -
-#pragma mark Constants
+#pragma mark - Constants
 
 static const NSTimeInterval kDefaultFrequency = 0.6;
 
 
-#pragma mark -
-#pragma mark Private
+#pragma mark - Private
 
 - (void)_performHide
 {
@@ -132,8 +129,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 }
 
 
-#pragma mark -
-#pragma mark Public
+#pragma mark - Public
 
 - (id)initWithFrame:(CGRect)frame title:(NSString *)titleText button:(BOOL)buttonUsed
 {
@@ -182,8 +178,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	
     return self;
 }
-
-
 
 
 - (void)startAnimation

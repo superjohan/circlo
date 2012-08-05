@@ -25,7 +25,7 @@
 
 @implementation MenuView
 
-#pragma mark Synthesizes
+#pragma mark - Synthesizes
 
 @synthesize delegate;
 @synthesize colorCircle1;
@@ -38,7 +38,7 @@
 @synthesize backgroundCircle;
 
 
-#pragma mark Private
+#pragma mark - Private
 
 - (void)_overlayButtonTouched:(id)sender
 {
@@ -83,7 +83,7 @@
 }
 
 
-#pragma mark PulseCircleViewDelegate
+#pragma mark - PulseCircleViewDelegate
 
 - (void)touchUpInCircleView:(PulseCircleView *)circleView
 {
@@ -101,7 +101,7 @@
 }
 
 
-#pragma mark Public
+#pragma mark - Public
 
 - (id)initWithFrame:(CGRect)frame colorScheme:(ColorScheme *)scheme
 {
