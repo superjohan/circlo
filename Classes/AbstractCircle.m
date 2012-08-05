@@ -16,16 +16,6 @@
 
 @implementation AbstractCircle
 
-@synthesize savedCenter;
-@synthesize savedFrame;
-@synthesize color;
-
-@synthesize destinationPoint;
-@synthesize animationDuration;
-@synthesize currentTime;
-@synthesize animating;
-@synthesize startPoint;
-
 - (void)animateToPoint:(CGPoint)point withDuration:(NSTimeInterval)duration
 {
 	self.destinationPoint = point;
@@ -37,7 +27,7 @@
 
 - (void)moveCircleWithDelta:(NSTimeInterval)delta
 {
-	if ( ! animating)
+	if ( ! self.animating)
 		return;
 	
 	self.currentTime += delta;

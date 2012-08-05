@@ -22,24 +22,8 @@
 
 @implementation PulseCircleView
 
-#pragma mark - Synthesizes
-
-@synthesize circle1;
-@synthesize circle2;
-@synthesize circle3;
-@synthesize circle4;
-@synthesize timer;
-@synthesize frequency;
-@synthesize amplitude;
-@synthesize button;
-@synthesize delegate;
-@synthesize circleSize;
-@synthesize circleHidden;
-@synthesize textColor;
-@synthesize soundType;
-@synthesize soundNumber;
-@synthesize selected;
-
+@synthesize textColor = _textColor;
+@synthesize selected = _selected;
 
 #pragma mark - Constants
 
@@ -245,12 +229,12 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 }
 
 
-- (void)setTextColor:(UIColor *)newTextColor
+- (void)setTextColor:(UIColor *)textColor
 {
-	[self.button setTitleColor:newTextColor forState:UIControlStateNormal];
-	[self.button setTitleColor:newTextColor forState:UIControlStateHighlighted];
+	[self.button setTitleColor:textColor forState:UIControlStateNormal];
+	[self.button setTitleColor:textColor forState:UIControlStateHighlighted];
 	
-	textColor = newTextColor;
+	_textColor = textColor;
 }
 
 
@@ -267,9 +251,9 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 }
 
 
-- (void)setSelected:(BOOL)newSelected
+- (void)setSelected:(BOOL)selected
 {
-	if (newSelected)
+	if (selected)
 	{
 		self.circle1.alpha = 0.50;
 		self.circle2.alpha = self.circle1.alpha;
@@ -284,7 +268,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 		self.circle4.alpha = self.circle1.alpha;
 	}
 
-	selected = newSelected;
+	_selected = selected;
 }
 
 

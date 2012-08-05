@@ -14,13 +14,6 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 
 @implementation ColorScheme
 
-#pragma mark - Synthesizes
-
-@synthesize primaryColor;
-@synthesize secondaryColor;
-@synthesize colorSchemeType;
-
-
 #pragma mark - Private
 
 - (UIColor *)_primaryColorForColorScheme:(CircloColorSchemeType)schemeType

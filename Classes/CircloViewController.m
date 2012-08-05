@@ -28,18 +28,6 @@
 
 @implementation CircloViewController
 
-#pragma mark - Synthesizes
-
-@synthesize timer;
-@synthesize hours;
-@synthesize minutes;
-@synthesize reactiveCircleView;
-@synthesize menuView;
-@synthesize colorScheme;
-@synthesize hourFormatter;
-@synthesize minuteFormatter;
-
-
 #pragma mark - Constants
 
 static const NSInteger kMaxHoursTag = 13;

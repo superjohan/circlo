@@ -25,19 +25,6 @@
 
 @implementation MenuView
 
-#pragma mark - Synthesizes
-
-@synthesize delegate;
-@synthesize colorCircle1;
-@synthesize colorCircle2;
-@synthesize colorCircle3;
-@synthesize colorCircle4;
-@synthesize colorCircle5;
-@synthesize soundCircle;
-@synthesize overlayButton;
-@synthesize backgroundCircle;
-
-
 #pragma mark - Private
 
 - (void)_overlayButtonTouched:(id)sender

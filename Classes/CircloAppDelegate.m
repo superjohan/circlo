@@ -12,10 +12,6 @@
 
 @implementation CircloAppDelegate
 
-@synthesize window;
-@synthesize viewController;
-
-
 #pragma mark - Private
 
 - (void)_createUserDefaults
