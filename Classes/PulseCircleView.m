@@ -29,7 +29,6 @@
 
 static const NSTimeInterval kDefaultFrequency = 0.6;
 
-
 #pragma mark - Private
 
 - (void)_performHide
@@ -50,7 +49,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	}];
 }
 
-
 - (void)_performShow
 {
 	UIViewAnimationOptions opts = UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionLayoutSubviews | UIViewAnimationOptionAllowUserInteraction;
@@ -68,7 +66,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	} completion:^(BOOL finished) {
 	}];
 }
-
 
 - (void)_performAnimation
 {
@@ -94,7 +91,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	[SoundManager playSound:self.soundType number:self.soundNumber];
 }
 
-
 - (void)_touchUpInside
 {
 	if ([self.delegate respondsToSelector:@selector(touchUpInCircleView:)])
@@ -103,7 +99,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	[self startAnimation];
 }
 
-
 - (void)_forceCircleDisplay
 {
 	[self.circle1 setNeedsDisplay];
@@ -111,7 +106,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	[self.circle3 setNeedsDisplay];
 	[self.circle4 setNeedsDisplay];
 }
-
 
 #pragma mark - Public
 
@@ -163,7 +157,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
     return self;
 }
 
-
 - (void)startAnimation
 {
 	if (self.timer || self.circleHidden)
@@ -178,7 +171,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	[[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
-
 - (void)stopAnimation
 {
 	if (self.circleHidden)
@@ -190,7 +182,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 		self.timer = nil;
 	}
 }
-
 
 - (void)hide
 {
@@ -214,7 +205,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	[self startAnimation];
 }
 
-
 - (void)resetImmediately
 {
 	if (self.circleHidden)
@@ -228,7 +218,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	self.circle4.frame = CGRectMake(0, 0, self.circle4.frame.size.width, self.circle4.frame.size.height);
 }
 
-
 - (void)setTextColor:(UIColor *)textColor
 {
 	[self.button setTitleColor:textColor forState:UIControlStateNormal];
@@ -236,7 +225,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	
 	_textColor = textColor;
 }
-
 
 - (void)setColor:(UIColor *)newColor
 {
@@ -249,7 +237,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	
 	[super setColor:newColor];
 }
-
 
 - (void)setSelected:(BOOL)selected
 {
@@ -270,6 +257,5 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 
 	_selected = selected;
 }
-
 
 @end

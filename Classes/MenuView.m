@@ -33,12 +33,10 @@
 		[self.delegate overlayButtonTouchedInMenuView:self];
 }
 
-
 - (void)_setSoundSelection
 {
 	self.soundCircle.selected = [SoundManager soundOn];
 }
-
 
 - (void)_setColorScheme:(ColorScheme *)scheme
 {
@@ -69,7 +67,6 @@
 	[self _setSoundSelection];
 }
 
-
 #pragma mark - PulseCircleViewDelegate
 
 - (void)touchUpInCircleView:(PulseCircleView *)circleView
@@ -86,7 +83,6 @@
 		[self _setSoundSelection];
 	}
 }
-
 
 #pragma mark - Public
 
@@ -134,7 +130,6 @@
     return self;
 }
 
-
 - (void)startAnimations
 {
 	[self.colorCircle1 startAnimation];
@@ -146,7 +141,6 @@
 	[self.backgroundCircle startAnimation];
 }
 
-
 - (void)stopAnimations
 {
 	[self.colorCircle1 resetImmediately];
@@ -157,6 +151,5 @@
 	[self.soundCircle resetImmediately];
 	[self.backgroundCircle resetImmediately];
 }
-
 
 @end

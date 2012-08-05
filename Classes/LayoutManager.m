@@ -91,7 +91,6 @@
 	}
 }
 
-
 + (void)createUnanimatedCircleLayoutInView:(UIView *)view
 {
 	CGFloat iPhoneCircleSize = 32.0;
@@ -114,7 +113,6 @@
 		}
 	}
 }
-
 
 + (void)createMenuViewLayoutInView:(UIView *)view
 {
@@ -168,8 +166,5 @@
 	soundCircle.tag = kSoundCircleTag;
 	[view addSubview:soundCircle];
 }
-
-
-
 
 @end

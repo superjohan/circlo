@@ -142,7 +142,6 @@
     return self;
 }
 
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	CGPoint point = [[touches anyObject] locationInView:self];

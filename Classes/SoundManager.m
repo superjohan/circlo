@@ -57,13 +57,11 @@
 	[[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"bg.m4a"];
 }
 
-
 + (void)playSound:(CircloSoundType)soundType number:(NSInteger)number
 {
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsSoundEnabled])
 		[[SimpleAudioEngine sharedEngine] playEffect:[NSString stringWithFormat:@"%d-%d.caf", soundType, number]];
 }
-
 
 + (void)toggleSound
 {
@@ -75,12 +73,10 @@
 	[[self class] playBackgroundSound];
 }
 
-
 + (BOOL)soundOn
 {
 	return [[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsSoundEnabled];
 }
-
 
 + (void)playBackgroundSound
 {
@@ -89,7 +85,6 @@
 	else
 		[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 }
-
 
 + (void)updateBackgroundMusicVolumeWithHours:(NSInteger)hours minutes:(NSInteger)minutes
 {
@@ -101,6 +96,5 @@
 	
 	[[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:(firstDecimal + secondDecimal)];
 }
-
 
 @end

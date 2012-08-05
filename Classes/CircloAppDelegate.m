@@ -24,7 +24,6 @@
 	}
 }
 
-
 #pragma mark - Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -37,17 +36,14 @@
     return YES;
 }
 
-
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
 	[self.viewController stopAllCircleAnimations];
 }
 
-
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
 	[self.viewController startAllCircleAnimations];
 }
-
 
 @end

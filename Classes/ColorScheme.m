@@ -42,7 +42,6 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 	return nil;
 }
 
-
 - (UIColor *)_secondaryColorForColorScheme:(CircloColorSchemeType)schemeType
 {
 	switch(schemeType) 
@@ -69,7 +68,6 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 	return nil;
 }
 
-
 #pragma mark - Public
 
 - (id)initWithColorScheme:(CircloColorSchemeType)schemeType
@@ -83,8 +81,5 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 	
 	return self;
 }
-
-
-
 
 @end

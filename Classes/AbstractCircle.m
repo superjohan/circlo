@@ -45,5 +45,4 @@
 	self.center = CGPointMake(self.startPoint.x - deltaX, self.startPoint.y - deltaY);
 }
 
-
 @end

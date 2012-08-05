@@ -34,7 +34,6 @@ static const NSInteger kMaxHoursTag = 13;
 static const NSInteger kAMTag = 13;
 static const NSInteger kPMTag = 14;
 
-
 #pragma mark - Private
 
 - (NSString *)_buttonTextForTag:(NSInteger)tag
@@ -50,7 +49,6 @@ static const NSInteger kPMTag = 14;
 	
 	return [NSString stringWithFormat:@"%d", tag];
 }
-
 
 - (void)_layoutHours:(NSInteger)hrs
 {
@@ -95,7 +93,6 @@ static const NSInteger kPMTag = 14;
 	
 	self.hours = hrs;
 }
-
 
 - (void)_layoutMinutes:(NSInteger)mins
 {
@@ -144,7 +141,6 @@ static const NSInteger kPMTag = 14;
 	self.minutes = mins;
 }
 
-
 - (void)_configureDateFormatters
 {
 	self.hourFormatter = [[NSDateFormatter alloc] init];
@@ -156,7 +152,6 @@ static const NSInteger kPMTag = 14;
 	[self.hourFormatter setDateFormat:@"HH"];
 	[self.minuteFormatter setDateFormat:@"mm"];
 }
-
 
 - (void)_updateClock:(NSTimer *)timer
 {
@@ -171,7 +166,6 @@ static const NSInteger kPMTag = 14;
 	[SoundManager updateBackgroundMusicVolumeWithHours:hrs minutes:mins];
 }
 
-
 - (void)_startTimer
 {
 	if (self.timer)
@@ -183,7 +177,6 @@ static const NSInteger kPMTag = 14;
 	[[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
-
 - (void)_stopTimer
 {
 	if (self.timer)
@@ -194,7 +187,6 @@ static const NSInteger kPMTag = 14;
 		[UIApplication sharedApplication].idleTimerDisabled = YES;
 	}
 }
-
 
 - (void)_handleDoubleTap:(UITapGestureRecognizer *)sender
 {
@@ -210,7 +202,6 @@ static const NSInteger kPMTag = 14;
 	}
 }
 
-
 - (void)_setColorScheme:(ColorScheme *)scheme
 {
 	self.colorScheme = scheme;
@@ -222,7 +213,6 @@ static const NSInteger kPMTag = 14;
 	}
 }
 
-
 - (ColorScheme *)_changeToColorScheme:(CircloColorSchemeType)schemeType
 {
 	ColorScheme *scheme = [ColorSchemeManager changeToColorScheme:schemeType];
@@ -231,7 +221,6 @@ static const NSInteger kPMTag = 14;
 
 	return scheme;
 }
-
 
 - (void)_fadeOutStartupImage
 {
@@ -253,7 +242,6 @@ static const NSInteger kPMTag = 14;
 	}];
 }
 
-
 #pragma mark - MenuViewDelegate
 
 - (void)overlayButtonTouchedInMenuView:(MenuView *)menuView
@@ -267,12 +255,10 @@ static const NSInteger kPMTag = 14;
 	}];
 }
 
-
 - (ColorScheme *)menuView:(MenuView *)menuView changedToColorScheme:(CircloColorSchemeType)schemeType
 {
 	return [self _changeToColorScheme:schemeType];
 }
-
 
 #pragma mark - Public
 
@@ -310,19 +296,16 @@ static const NSInteger kPMTag = 14;
 	[self _fadeOutStartupImage];
 }
 
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait ||
 			interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 
-
 - (void)dealloc 
 {
 	[self _stopTimer];
 }
-
 
 - (void)startAllCircleAnimations
 {
@@ -339,7 +322,6 @@ static const NSInteger kPMTag = 14;
 	[self _startTimer];
 }
 
-
 - (void)stopAllCircleAnimations
 {
 	for (id view in [self.reactiveCircleView subviews])
@@ -354,6 +336,5 @@ static const NSInteger kPMTag = 14;
 	
 	[self _stopTimer];
 }
-
 
 @end

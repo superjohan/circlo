@@ -21,7 +21,6 @@
 	return scheme;
 }
 
-
 + (ColorScheme *)getSavedColorScheme
 {	
 	CircloColorSchemeType schemeType = [[NSUserDefaults standardUserDefaults] integerForKey:kCircloUserDefaultsColorScheme];
@@ -31,6 +30,5 @@
 	else
 		return [[ColorScheme alloc] initWithColorScheme:schemeType];
 }
-
 
 @end
