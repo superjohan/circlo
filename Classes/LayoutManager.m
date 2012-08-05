@@ -38,7 +38,7 @@
 	NSMutableArray *frequencies = [NSMutableArray array];
 	for (NSInteger i = 0; i < 30; i++)
 	{
-		[frequencies addObject:[NSNumber numberWithDouble:freq]];
+		[frequencies addObject:@(freq)];
 		freq += .075;
 	}
 	
