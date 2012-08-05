@@ -148,19 +148,6 @@
 }
 
 
-- (void)dealloc
-{
-	self.colorCircle1.delegate = nil;
-	self.colorCircle2.delegate = nil;
-	self.colorCircle3.delegate = nil;
-	self.colorCircle4.delegate = nil;
-	self.colorCircle5.delegate = nil;
-	self.soundCircle.delegate = nil;
-	self.delegate = nil;
-	
-}
-
-
 - (void)startAnimations
 {
 	[self.colorCircle1 startAnimation];
