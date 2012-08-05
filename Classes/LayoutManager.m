@@ -52,7 +52,7 @@
 											circleSize,
 											circleSize);
 			
-			PulseCircleView *circ = [[[PulseCircleView alloc] initWithFrame:circleFrame title:text button:NO] autorelease];
+			PulseCircleView *circ = [[PulseCircleView alloc] initWithFrame:circleFrame title:text button:NO];
 			circ.amplitude = amplitude;
 			
 			NSInteger frequencyIndex = arc4random() % frequencies.count;
@@ -108,7 +108,7 @@
 		for(NSInteger j = 0; j < 15; j++)
 		{
 			CGRect circleFrame = CGRectMake(i * circleSize, j * circleSize, circleSize, circleSize);
-			Circle *circle = [[[Circle alloc] initWithFrame:circleFrame] autorelease];
+			Circle *circle = [[Circle alloc] initWithFrame:circleFrame];
 			circle.userInteractionEnabled = NO;
 			[view addSubview:circle];
 		}
@@ -125,7 +125,7 @@
 	[view addSubview:overlayButton];
 	
 	CGRect backgroundCircleFrame = CGRectMake(0, view.bounds.size.height - floor(view.bounds.size.width / 2.0), view.bounds.size.width, view.bounds.size.width);
-	PulseCircleView *backgroundCircle = [[[PulseCircleView alloc] initWithFrame:backgroundCircleFrame title:nil button:NO] autorelease];
+	PulseCircleView *backgroundCircle = [[PulseCircleView alloc] initWithFrame:backgroundCircleFrame title:nil button:NO];
 	backgroundCircle.tag = kBackgroundCircleTag;
 	[view addSubview:backgroundCircle];
 	
@@ -135,27 +135,27 @@
 	CGFloat yOrigin = view.bounds.size.height - xPadding;
 	
 	CGRect circle1Frame = CGRectMake(xOrigin, yOrigin, length, length);
-	PulseCircleView *circle1 = [[[PulseCircleView alloc] initWithFrame:circle1Frame title:NSLocalizedString(@"One", nil) button:YES] autorelease];
+	PulseCircleView *circle1 = [[PulseCircleView alloc] initWithFrame:circle1Frame title:NSLocalizedString(@"One", nil) button:YES];
 	circle1.tag = kColorCircle1Tag;
 	[view addSubview:circle1];
 	
 	CGRect circle2Frame = CGRectMake(circle1Frame.origin.x + xPadding, yOrigin, length, length);
-	PulseCircleView *circle2 = [[[PulseCircleView alloc] initWithFrame:circle2Frame title:NSLocalizedString(@"Two", nil) button:YES] autorelease];
+	PulseCircleView *circle2 = [[PulseCircleView alloc] initWithFrame:circle2Frame title:NSLocalizedString(@"Two", nil) button:YES];
 	circle2.tag = kColorCircle2Tag;
 	[view addSubview:circle2];
 
 	CGRect circle3Frame = CGRectMake(circle2Frame.origin.x + xPadding, yOrigin, length, length);
-	PulseCircleView *circle3 = [[[PulseCircleView alloc] initWithFrame:circle3Frame title:NSLocalizedString(@"Three", nil) button:YES] autorelease];
+	PulseCircleView *circle3 = [[PulseCircleView alloc] initWithFrame:circle3Frame title:NSLocalizedString(@"Three", nil) button:YES];
 	circle3.tag = kColorCircle3Tag;
 	[view addSubview:circle3];
 	
 	CGRect circle4Frame = CGRectMake(circle3Frame.origin.x + xPadding, yOrigin, length, length);
-	PulseCircleView *circle4 = [[[PulseCircleView alloc] initWithFrame:circle4Frame title:NSLocalizedString(@"Four", nil) button:YES] autorelease];
+	PulseCircleView *circle4 = [[PulseCircleView alloc] initWithFrame:circle4Frame title:NSLocalizedString(@"Four", nil) button:YES];
 	circle4.tag = kColorCircle4Tag;
 	[view addSubview:circle4];
 	
 	CGRect circle5Frame = CGRectMake(circle4Frame.origin.x + xPadding, yOrigin, length, length);
-	PulseCircleView *circle5 = [[[PulseCircleView alloc] initWithFrame:circle5Frame title:NSLocalizedString(@"Five", nil) button:YES] autorelease];
+	PulseCircleView *circle5 = [[PulseCircleView alloc] initWithFrame:circle5Frame title:NSLocalizedString(@"Five", nil) button:YES];
 	circle5.tag = kColorCircle5Tag;
 	[view addSubview:circle5];
 	
@@ -164,16 +164,12 @@
 										 floor(backgroundCircleFrame.origin.y + (view.bounds.size.width * 0.03125)), 
 										 soundCircleLength, 
 										 soundCircleLength);
-	PulseCircleView *soundCircle = [[[PulseCircleView alloc] initWithFrame:soundCircleFrame title:NSLocalizedString(@"Sound", nil) button:YES] autorelease];
+	PulseCircleView *soundCircle = [[PulseCircleView alloc] initWithFrame:soundCircleFrame title:NSLocalizedString(@"Sound", nil) button:YES];
 	soundCircle.tag = kSoundCircleTag;
 	[view addSubview:soundCircle];
 }
 
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 
 @end

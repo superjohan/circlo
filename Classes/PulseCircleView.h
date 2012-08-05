@@ -14,9 +14,9 @@
 
 @property (nonatomic, assign) NSTimeInterval frequency;
 @property (nonatomic, assign) NSInteger amplitude;
-@property (nonatomic, assign) id delegate;
+@property (nonatomic, weak) id delegate;
 @property (nonatomic, assign) BOOL circleHidden;
-@property (nonatomic, retain) UIColor *textColor;
+@property (nonatomic, strong) UIColor *textColor;
 @property (nonatomic, assign) CircloSoundType soundType;
 @property (nonatomic, assign) NSInteger soundNumber;
 @property (nonatomic, assign) BOOL selected;

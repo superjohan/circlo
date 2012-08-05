@@ -78,7 +78,7 @@
 	UIViewAnimationOptions opts = UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionLayoutSubviews | UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveEaseOut;
 	NSTimeInterval duration = 1;
 	
-	__block ReactiveCircleView *bself = self;
+	__weak ReactiveCircleView *bself = self;
 	
 	[UIView animateWithDuration:duration delay:0 options:opts animations:^{
 		for(id view in [bself subviews])
@@ -99,7 +99,7 @@
 	UIViewAnimationOptions opts = UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionLayoutSubviews | UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveEaseOut;
 	NSTimeInterval duration = 1;
 	
-	__block ReactiveCircleView *bself = self;
+	__weak ReactiveCircleView *bself = self;
 	
 	[UIView animateWithDuration:duration delay:0 options:opts animations:^{
 		for(id view in [bself subviews])
@@ -142,10 +142,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {

@@ -21,8 +21,8 @@ typedef enum
 
 @interface ColorScheme : NSObject
 
-@property (nonatomic, retain) UIColor *primaryColor;
-@property (nonatomic, retain) UIColor *secondaryColor;
+@property (nonatomic, strong) UIColor *primaryColor;
+@property (nonatomic, strong) UIColor *secondaryColor;
 @property (nonatomic, assign) CircloColorSchemeType colorSchemeType;
 
 - (id)initWithColorScheme:(CircloColorSchemeType)schemeType;

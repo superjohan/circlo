@@ -92,13 +92,6 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 }
 
 
-- (void)dealloc
-{
-	self.primaryColor = nil;
-	self.secondaryColor = nil;
-	
-	[super dealloc];
-}
 
 
 @end

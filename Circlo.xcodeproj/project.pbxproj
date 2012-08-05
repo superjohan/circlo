@@ -36,10 +36,10 @@
 		90E9049C13B2FE220055FBF0 /* ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E9049B13B2FE220055FBF0 /* ColorScheme.m */; };
 		90F1280713B997530071C83B /* Sniglet_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90F1280613B997530071C83B /* Sniglet_Regular.ttf */; };
 		90F1280A13B999DB0071C83B /* CircloConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1280913B999DB0071C83B /* CircloConstants.m */; };
-		90F2D27413BB68EF00DC0827 /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D26C13BB68EF00DC0827 /* CDAudioManager.m */; };
-		90F2D27513BB68EF00DC0827 /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D26F13BB68EF00DC0827 /* CDOpenALSupport.m */; };
-		90F2D27613BB68EF00DC0827 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D27113BB68EF00DC0827 /* CocosDenshion.m */; };
-		90F2D27713BB68EF00DC0827 /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D27313BB68EF00DC0827 /* SimpleAudioEngine.m */; };
+		90F2D27413BB68EF00DC0827 /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D26C13BB68EF00DC0827 /* CDAudioManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		90F2D27513BB68EF00DC0827 /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D26F13BB68EF00DC0827 /* CDOpenALSupport.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		90F2D27613BB68EF00DC0827 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D27113BB68EF00DC0827 /* CocosDenshion.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		90F2D27713BB68EF00DC0827 /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D27313BB68EF00DC0827 /* SimpleAudioEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		90F2D27C13BB696400DC0827 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2D27B13BB696400DC0827 /* AVFoundation.framework */; };
 		90F2D27E13BB696C00DC0827 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2D27D13BB696C00DC0827 /* AudioToolbox.framework */; };
 		90F2D28A13BB69CE00DC0827 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2D28913BB69CE00DC0827 /* OpenAL.framework */; };
@@ -520,6 +520,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -529,7 +530,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				INFOPLIST_FILE = "Resources/Circlo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = Circlo;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -542,6 +543,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -549,7 +551,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				INFOPLIST_FILE = "Resources/Circlo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = Circlo;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -578,6 +580,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -586,7 +589,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				INFOPLIST_FILE = "Resources/Circlo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = Circlo;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

@@ -16,14 +16,14 @@
 #import "SoundManager.h"
 
 @interface CircloViewController ()
-@property (nonatomic, retain) NSTimer *timer;
+@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) NSInteger hours;
 @property (nonatomic, assign) NSInteger minutes;
-@property (nonatomic, retain) ReactiveCircleView *reactiveCircleView;
-@property (nonatomic, retain) MenuView *menuView;
-@property (nonatomic, retain) ColorScheme *colorScheme;
-@property (nonatomic, retain) NSDateFormatter *hourFormatter;
-@property (nonatomic, retain) NSDateFormatter *minuteFormatter;
+@property (nonatomic, strong) ReactiveCircleView *reactiveCircleView;
+@property (nonatomic, strong) MenuView *menuView;
+@property (nonatomic, strong) ColorScheme *colorScheme;
+@property (nonatomic, strong) NSDateFormatter *hourFormatter;
+@property (nonatomic, strong) NSDateFormatter *minuteFormatter;
 @end
 
 @implementation CircloViewController
@@ -162,10 +162,10 @@ static const NSInteger kPMTag = 14;
 
 - (void)_configureDateFormatters
 {
-	self.hourFormatter = [[[NSDateFormatter alloc] init] autorelease];
-	self.minuteFormatter = [[[NSDateFormatter alloc] init] autorelease];
+	self.hourFormatter = [[NSDateFormatter alloc] init];
+	self.minuteFormatter = [[NSDateFormatter alloc] init];
 	
-	[self.hourFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"fi_FI"] autorelease]];
+	[self.hourFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"fi_FI"]];
 	[self.minuteFormatter setLocale:self.hourFormatter.locale];
 	
 	[self.hourFormatter setDateFormat:@"HH"];
@@ -217,7 +217,7 @@ static const NSInteger kPMTag = 14;
 	{
 		[self.menuView startAnimations];
 		
-		__block CircloViewController *bself = self;
+		__weak CircloViewController *bself = self;
 
 		[UIView animateWithDuration:1 animations:^{
 			bself.menuView.alpha = 1;
@@ -253,9 +253,9 @@ static const NSInteger kPMTag = 14;
 	__block UIImageView *startupImageView = nil;
 	
 	if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-		startupImageView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default-Portrait"]] autorelease];
+		startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default-Portrait"]];
 	else
-		startupImageView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]] autorelease];
+		startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
 	
 	startupImageView.frame = CGRectMake(0, 0, startupImageView.image.size.width, startupImageView.image.size.height);
 	[self.view addSubview:startupImageView];
@@ -274,7 +274,7 @@ static const NSInteger kPMTag = 14;
 
 - (void)overlayButtonTouchedInMenuView:(MenuView *)menuView
 {
-	__block CircloViewController *bself = self;
+	__weak CircloViewController *bself = self;
 	
 	[UIView animateWithDuration:1 animations:^{
 		bself.menuView.alpha = 0;
@@ -301,20 +301,20 @@ static const NSInteger kPMTag = 14;
 	self.minutes = -1;
 	
 	self.view.backgroundColor = [UIColor colorWithRed:1 green:1 blue:0 alpha:1];
-	self.reactiveCircleView = [[[ReactiveCircleView alloc] initWithFrame:self.view.frame] autorelease];
+	self.reactiveCircleView = [[ReactiveCircleView alloc] initWithFrame:self.view.frame];
 	[self.view addSubview:self.reactiveCircleView];
 	[self.reactiveCircleView becomeFirstResponder];
 	
 	[LayoutManager createClockLayoutInView:self.reactiveCircleView];
 
-	UITapGestureRecognizer *tapRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_handleDoubleTap:)] autorelease];
+	UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_handleDoubleTap:)];
 	tapRecognizer.numberOfTapsRequired = 2;
 	tapRecognizer.delaysTouchesEnded = NO;
 	[self.reactiveCircleView addGestureRecognizer:tapRecognizer];
 		
 	[self _setColorScheme:[ColorSchemeManager getSavedColorScheme]];
 	
-	self.menuView = [[[MenuView alloc] initWithFrame:self.view.bounds colorScheme:self.colorScheme] autorelease];
+	self.menuView = [[MenuView alloc] initWithFrame:self.view.bounds colorScheme:self.colorScheme];
 	self.menuView.alpha = 0;
 	self.menuView.delegate = self;
 	[self.view addSubview:self.menuView];
@@ -339,13 +339,7 @@ static const NSInteger kPMTag = 14;
 {
 	[self _stopTimer];
 	
-	self.reactiveCircleView = nil;
-	self.menuView = nil;
-	self.colorScheme = nil;
-	self.hourFormatter = nil;
-	self.minuteFormatter = nil;
 	
-    [super dealloc];
 }
 
 

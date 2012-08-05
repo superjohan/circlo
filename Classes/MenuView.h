@@ -23,7 +23,7 @@ enum
 
 @interface MenuView : UIView
 
-@property (nonatomic, assign) id delegate;
+@property (nonatomic, weak) id delegate;
 
 - (id)initWithFrame:(CGRect)frame colorScheme:(ColorScheme *)scheme;
 - (void)startAnimations;

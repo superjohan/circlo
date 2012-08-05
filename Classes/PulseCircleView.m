@@ -11,13 +11,13 @@
 #import "CircloConstants.h"
 
 @interface PulseCircleView ()
-@property (nonatomic, retain) Circle *circle1;
-@property (nonatomic, retain) Circle *circle2;
-@property (nonatomic, retain) Circle *circle3;
-@property (nonatomic, retain) Circle *circle4;
-@property (nonatomic, retain) NSTimer *timer;
+@property (nonatomic, strong) Circle *circle1;
+@property (nonatomic, strong) Circle *circle2;
+@property (nonatomic, strong) Circle *circle3;
+@property (nonatomic, strong) Circle *circle4;
+@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) CGSize circleSize;
-@property (nonatomic, retain) UIButton *button;
+@property (nonatomic, strong) UIButton *button;
 @end
 
 @implementation PulseCircleView
@@ -55,7 +55,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 {
 	UIViewAnimationOptions opts = UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionLayoutSubviews | UIViewAnimationOptionAllowUserInteraction;
 		
-	__block PulseCircleView *bself = self;
+	__weak PulseCircleView *bself = self;
 	
 	NSTimeInterval hideDuration = 1.0; //self.frequency;
 	
@@ -74,7 +74,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 {
 	UIViewAnimationOptions opts = UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionLayoutSubviews | UIViewAnimationOptionAllowUserInteraction;
 	
-	__block PulseCircleView *bself = self;
+	__weak PulseCircleView *bself = self;
 		
 	NSTimeInterval showDuration = 1.0;
 	
@@ -98,7 +98,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	self.circle3.frame = self.circle1.frame;
 	self.circle4.frame = self.circle1.frame;
 	
-	__block PulseCircleView *bself = self;
+	__weak PulseCircleView *bself = self;
 	__block CGFloat rand1X = (arc4random() % self.amplitude) + 1;
 	__block CGFloat rand1Y = (arc4random() % self.amplitude) + 1;
 		
@@ -139,22 +139,22 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 {
     if ((self = [super initWithFrame:frame])) 
 	{		
-		self.circle1 = [[[Circle alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)] autorelease];
+		self.circle1 = [[Circle alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
 		self.circle1.alpha = 0.5;
 		self.circle1.userInteractionEnabled = NO;
 		[self addSubview:self.circle1];
 
-		self.circle2 = [[[Circle alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)] autorelease];
+		self.circle2 = [[Circle alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
 		self.circle2.alpha = self.circle1.alpha;
 		self.circle2.userInteractionEnabled = self.circle1.userInteractionEnabled;
 		[self addSubview:self.circle2];
 
-		self.circle3 = [[[Circle alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)] autorelease];
+		self.circle3 = [[Circle alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
 		self.circle3.alpha = self.circle1.alpha;
 		self.circle3.userInteractionEnabled = self.circle1.userInteractionEnabled;
 		[self addSubview:self.circle3];
 
-		self.circle4 = [[[Circle alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)] autorelease];
+		self.circle4 = [[Circle alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
 		self.circle4.alpha = self.circle1.alpha;
 		self.circle4.userInteractionEnabled = self.circle1.userInteractionEnabled;
 		[self addSubview:self.circle4];
@@ -184,17 +184,6 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 }
 
 
-- (void)dealloc 
-{
-	self.circle1 = nil;
-	self.circle2 = nil;
-	self.circle3 = nil;
-	self.circle4 = nil;
-	self.timer = nil;
-	self.button = nil;
-
-    [super dealloc];
-}
 
 
 - (void)startAnimation

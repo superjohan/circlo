@@ -55,11 +55,5 @@
 	self.center = CGPointMake(self.startPoint.x - deltaX, self.startPoint.y - deltaY);
 }
 
-- (void)dealloc
-{
-	self.color = nil;
-	
-	[super dealloc];
-}
 
 @end

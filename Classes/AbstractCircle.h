@@ -12,7 +12,7 @@
 
 @property (nonatomic, assign) CGPoint savedCenter;
 @property (nonatomic, assign) CGRect savedFrame;
-@property (nonatomic, retain) UIColor *color;
+@property (nonatomic, strong) UIColor *color;
 
 // for manual animation
 @property (nonatomic, assign) CGPoint destinationPoint;

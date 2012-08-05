@@ -13,7 +13,7 @@
 
 + (ColorScheme *)changeToColorScheme:(CircloColorSchemeType)schemeType
 {
-	ColorScheme *scheme = [[[ColorScheme alloc] initWithColorScheme:schemeType] autorelease];
+	ColorScheme *scheme = [[ColorScheme alloc] initWithColorScheme:schemeType];
 	
 	[[NSUserDefaults standardUserDefaults] setInteger:schemeType forKey:kCircloUserDefaultsColorScheme];
 	[[NSUserDefaults standardUserDefaults] synchronize];
@@ -29,7 +29,7 @@
 	if(schemeType == kColorSchemeNone || schemeType >= kColorSchemeMax)
 		return [[self class] changeToColorScheme:kColorScheme1];
 	else
-		return [[[ColorScheme alloc] initWithColorScheme:schemeType] autorelease];
+		return [[ColorScheme alloc] initWithColorScheme:schemeType];
 }
 
 

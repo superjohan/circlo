@@ -13,14 +13,14 @@
 #import "SoundManager.h"
 
 @interface MenuView ()
-@property (nonatomic, retain) PulseCircleView *colorCircle1;
-@property (nonatomic, retain) PulseCircleView *colorCircle2;
-@property (nonatomic, retain) PulseCircleView *colorCircle3;
-@property (nonatomic, retain) PulseCircleView *colorCircle4;
-@property (nonatomic, retain) PulseCircleView *colorCircle5;
-@property (nonatomic, retain) PulseCircleView *soundCircle;
-@property (nonatomic, retain) UIButton *overlayButton;
-@property (nonatomic, retain) PulseCircleView *backgroundCircle;
+@property (nonatomic, strong) PulseCircleView *colorCircle1;
+@property (nonatomic, strong) PulseCircleView *colorCircle2;
+@property (nonatomic, strong) PulseCircleView *colorCircle3;
+@property (nonatomic, strong) PulseCircleView *colorCircle4;
+@property (nonatomic, strong) PulseCircleView *colorCircle5;
+@property (nonatomic, strong) PulseCircleView *soundCircle;
+@property (nonatomic, strong) UIButton *overlayButton;
+@property (nonatomic, strong) PulseCircleView *backgroundCircle;
 @end
 
 @implementation MenuView
@@ -156,17 +156,8 @@
 	self.colorCircle4.delegate = nil;
 	self.colorCircle5.delegate = nil;
 	self.soundCircle.delegate = nil;
-	self.colorCircle1 = nil;
-	self.colorCircle2 = nil;
-	self.colorCircle3 = nil;
-	self.colorCircle4 = nil;
-	self.colorCircle5 = nil;
-	self.soundCircle = nil;
-	self.overlayButton = nil;
-	self.backgroundCircle = nil;
 	self.delegate = nil;
 	
-    [super dealloc];
 }
 
 
