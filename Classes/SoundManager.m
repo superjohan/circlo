@@ -60,7 +60,7 @@
 
 + (void)playSound:(CircloSoundType)soundType number:(NSInteger)number
 {
-	if([[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsSoundEnabled])
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsSoundEnabled])
 		[[SimpleAudioEngine sharedEngine] playEffect:[NSString stringWithFormat:@"%d-%d.caf", soundType, number]];
 }
 
@@ -84,7 +84,7 @@
 
 + (void)playBackgroundSound
 {
-	if([[self class] soundOn])
+	if ([[self class] soundOn])
 		[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"bg.m4a" loop:YES];
 	else
 		[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
@@ -93,7 +93,7 @@
 
 + (void)updateBackgroundMusicVolumeWithHours:(NSInteger)hours minutes:(NSInteger)minutes
 {
-	if(hours > 12)
+	if (hours > 12)
 		hours = hours - 12;
 	
 	double firstDecimal = (double)hours / 12.0;

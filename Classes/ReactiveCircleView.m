@@ -22,7 +22,7 @@
 	double b = destinationPoint.y - originPoint.y;
 	double c = sqrt(pow(a, 2) + pow(b, 2));
 
-	if(c == 0) 
+	if (c == 0) 
 		return 0.00001; // this is only to prevent a division by zero
 	
 	return c;
@@ -49,12 +49,12 @@
 	CGFloat y = circle.savedCenter.y + (circle.savedCenter.y - point.y) * ratio;
 	CGPoint newPoint = CGPointMake(x, y);
 
-	if(fabs(newPoint.x - circle.center.x) < 0.000001 && fabs(newPoint.y - circle.center.y) < 0.000001)
+	if (fabs(newPoint.x - circle.center.x) < 0.000001 && fabs(newPoint.y - circle.center.y) < 0.000001)
 		return;
 	
 	circle.center = newPoint;
 
-	if(![circle isKindOfClass:[PulseCircleView class]])
+	if ( ! [circle isKindOfClass:[PulseCircleView class]])
 	{
 		CGFloat sizeRatio = (distance / maxDistance) < 1 ? (distance / maxDistance) : 1;
 
@@ -64,12 +64,12 @@
 
 - (void)_returnCircleToNormal:(AbstractCircle *)circle
 {
-	if(fabs(circle.savedCenter.x - circle.center.x) < 0.000001 && fabs(circle.savedCenter.y - circle.center.y) < 0.000001)
+	if (fabs(circle.savedCenter.x - circle.center.x) < 0.000001 && fabs(circle.savedCenter.y - circle.center.y) < 0.000001)
 		return;
 	
 	circle.center = circle.savedCenter;
 
-	if(![circle isKindOfClass:[PulseCircleView class]])
+	if ( ! [circle isKindOfClass:[PulseCircleView class]])
 		circle.frame = CGRectMake(circle.savedFrame.origin.x, circle.savedFrame.origin.y, circle.savedFrame.size.width, circle.savedFrame.size.height);
 }
 
@@ -81,9 +81,9 @@
 	__weak ReactiveCircleView *bself = self;
 	
 	[UIView animateWithDuration:duration delay:0 options:opts animations:^{
-		for(id view in [bself subviews])
+		for (id view in [bself subviews])
 		{
-			if([view isKindOfClass:[PulseCircleView class]] || [view isKindOfClass:[Circle class]])
+			if ([view isKindOfClass:[PulseCircleView class]] || [view isKindOfClass:[Circle class]])
 			{
 				PulseCircleView *circle = view;
 				
@@ -102,9 +102,9 @@
 	__weak ReactiveCircleView *bself = self;
 	
 	[UIView animateWithDuration:duration delay:0 options:opts animations:^{
-		for(id view in [bself subviews])
+		for (id view in [bself subviews])
 		{
-			if([view isKindOfClass:[PulseCircleView class]] || [view isKindOfClass:[Circle class]])
+			if ([view isKindOfClass:[PulseCircleView class]] || [view isKindOfClass:[Circle class]])
 			{
 				PulseCircleView *circle = view;
 				
@@ -117,9 +117,9 @@
 
 - (void)_timerFired:(CADisplayLink *)sender
 {
-	for(id view in [self subviews])
+	for (id view in [self subviews])
 	{
-		if([view isKindOfClass:[PulseCircleView class]] || [view isKindOfClass:[Circle class]])
+		if ([view isKindOfClass:[PulseCircleView class]] || [view isKindOfClass:[Circle class]])
 		{
 			AbstractCircle *circle = view;
 			

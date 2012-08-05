@@ -23,7 +23,7 @@
 	CGFloat iPadCircleSize = 130.0;
 	CGFloat circleSize = 0;
 	
-	if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 		circleSize = iPadCircleSize;
 	else
 		circleSize = iPhoneCircleSize;
@@ -36,15 +36,15 @@
 	
 	double freq = 3.0;
 	NSMutableArray *frequencies = [NSMutableArray array];
-	for(NSInteger i = 0; i < 30; i++)
+	for (NSInteger i = 0; i < 30; i++)
 	{
 		[frequencies addObject:[NSNumber numberWithDouble:freq]];
 		freq += .075;
 	}
 	
-	for(NSInteger i = 0; i < 6; i++)
+	for (NSInteger i = 0; i < 6; i++)
 	{
-		for(NSInteger j = 0; j < 5; j++)
+		for (NSInteger j = 0; j < 5; j++)
 		{
 			NSString *text = nil;
 			CGRect circleFrame = CGRectMake(xPadding + (j * circleSize),
@@ -65,22 +65,22 @@
 			
 			[circ hide];
 			
-			if(tagCounter > 0 && tagCounter < 13)
+			if (tagCounter > 0 && tagCounter < 13)
 			{
 				circ.soundType = kSoundTypeHours;
 				circ.soundNumber = tagCounter;
 			}
-			else if(tagCounter >= 13 && tagCounter < 15)
+			else if (tagCounter >= 13 && tagCounter < 15)
 			{
 				circ.soundType = kSoundTypeAMPM;
 				circ.soundNumber = tagCounter - 12;
 			}
-			else if(tagCounter >= 15 && tagCounter < 21)
+			else if (tagCounter >= 15 && tagCounter < 21)
 			{
 				circ.soundType = kSoundTypeMinutesLeft;
 				circ.soundNumber = tagCounter - 14;
 			}
-			else if(tagCounter >= 21 && tagCounter < 31)
+			else if (tagCounter >= 21 && tagCounter < 31)
 			{
 				circ.soundType = kSoundTypeMinutesRight;
 				circ.soundNumber = tagCounter - 20;
@@ -98,14 +98,14 @@
 	CGFloat iPadCircleSize = 130.0; // FIXME
 	CGFloat circleSize = 0;
 	
-	if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 		circleSize = iPadCircleSize;
 	else
 		circleSize = iPhoneCircleSize;
 	
-	for(NSInteger i = 0; i < 10; i++)
+	for (NSInteger i = 0; i < 10; i++)
 	{
-		for(NSInteger j = 0; j < 15; j++)
+		for (NSInteger j = 0; j < 15; j++)
 		{
 			CGRect circleFrame = CGRectMake(i * circleSize, j * circleSize, circleSize, circleSize);
 			Circle *circle = [[Circle alloc] initWithFrame:circleFrame];

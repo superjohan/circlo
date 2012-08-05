@@ -21,7 +21,7 @@
 
 - (void)_createUserDefaults
 {
-	if(![[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsAppHasLaunchedBefore])
+	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsAppHasLaunchedBefore])
 	{
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:kCircloUserDefaultsAppHasLaunchedBefore];
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:kCircloUserDefaultsSoundEnabled];

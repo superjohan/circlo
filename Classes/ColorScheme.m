@@ -81,7 +81,7 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 
 - (id)initWithColorScheme:(CircloColorSchemeType)schemeType
 {
-	if((self = [super init]))
+	if ((self = [super init]))
 	{
 		self.primaryColor = [self _primaryColorForColorScheme:schemeType];
 		self.secondaryColor = [self _secondaryColorForColorScheme:schemeType];

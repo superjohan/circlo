@@ -37,7 +37,7 @@
 
 - (void)moveCircleWithDelta:(NSTimeInterval)delta
 {
-	if(!animating)
+	if ( ! animating)
 		return;
 	
 	self.currentTime += delta;
@@ -45,7 +45,7 @@
 	CGFloat deltaX = (self.startPoint.x - self.destinationPoint.x) * (self.currentTime / self.animationDuration);
 	CGFloat deltaY = (self.startPoint.y - self.destinationPoint.y) * (self.currentTime / self.animationDuration);
 	
-	if(self.currentTime >= self.animationDuration)
+	if (self.currentTime >= self.animationDuration)
 	{
 		self.center = self.destinationPoint;
 		self.animating = NO;

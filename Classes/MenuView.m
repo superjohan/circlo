@@ -42,7 +42,7 @@
 
 - (void)_overlayButtonTouched:(id)sender
 {
-	if([self.delegate respondsToSelector:@selector(overlayButtonTouchedInMenuView:)])
+	if ([self.delegate respondsToSelector:@selector(overlayButtonTouchedInMenuView:)])
 		[self.delegate overlayButtonTouchedInMenuView:self];
 }
 
@@ -69,11 +69,11 @@
 	self.soundCircle.color = self.colorCircle1.color;
 	self.soundCircle.textColor = self.colorCircle1.textColor;
 	
-	for(NSInteger i = 1; i < kSoundCircleTag; i++)
+	for (NSInteger i = 1; i < kSoundCircleTag; i++)
 	{
 		PulseCircleView *circle = (PulseCircleView *)[self viewWithTag:i];
 		
-		if(i == scheme.colorSchemeType)
+		if (i == scheme.colorSchemeType)
 			circle.selected = YES;
 		else
 			circle.selected = NO;
@@ -87,13 +87,13 @@
 
 - (void)touchUpInCircleView:(PulseCircleView *)circleView
 {
-	if(circleView.tag > 0 && circleView.tag < 6)
+	if (circleView.tag > 0 && circleView.tag < 6)
 	{
-		if([self.delegate respondsToSelector:@selector(menuView:changedToColorScheme:)])
+		if ([self.delegate respondsToSelector:@selector(menuView:changedToColorScheme:)])
 			[self _setColorScheme:[self.delegate menuView:self changedToColorScheme:circleView.tag]];
 	}
 	
-	if(circleView.tag == kSoundCircleTag)
+	if (circleView.tag == kSoundCircleTag)
 	{
 		[SoundManager toggleSound];
 		[self _setSoundSelection];
@@ -105,7 +105,7 @@
 
 - (id)initWithFrame:(CGRect)frame colorScheme:(ColorScheme *)scheme
 {
-    if((self = [super initWithFrame:frame]))
+    if ((self = [super initWithFrame:frame]))
 	{
 		[LayoutManager createMenuViewLayoutInView:self];
 		

@@ -54,13 +54,13 @@ static const NSInteger kPMTag = 14;
 
 - (NSString *)_buttonTextForTag:(NSInteger)tag
 {
-	if(tag < kMaxHoursTag)
+	if (tag < kMaxHoursTag)
 		return [NSString stringWithFormat:@"%d", kMaxHoursTag - tag];
 	
-	if(tag == kAMTag)
+	if (tag == kAMTag)
 		return NSLocalizedString(@"AM", nil);
 	
-	if(tag == kPMTag)
+	if (tag == kPMTag)
 		return NSLocalizedString(@"PM", nil);
 	
 	return [NSString stringWithFormat:@"%d", tag];
@@ -69,27 +69,27 @@ static const NSInteger kPMTag = 14;
 
 - (void)_layoutHours:(NSInteger)hrs
 {
-	if(self.hours == hrs)
+	if (self.hours == hrs)
 		return;
 	
 	BOOL afternoon = NO;
-	if(hrs == 0)
+	if (hrs == 0)
 	{
 		hrs = 12;
 	}
-	else if(hrs >= 12)
+	else if (hrs >= 12)
 	{
 		afternoon = YES;
 
-		if(hrs > 12)
+		if (hrs > 12)
 			hrs = hrs - 12;
 	}
 	
-	for(NSInteger i = 1; i < kMaxHoursTag; i++)
+	for (NSInteger i = 1; i < kMaxHoursTag; i++)
 	{
 		PulseCircleView *circ = (PulseCircleView *)[self.view viewWithTag:kMaxHoursTag - i];
 		
-		if(i <= hrs)
+		if (i <= hrs)
 			[circ show];
 		else
 			[circ hide];
@@ -97,7 +97,7 @@ static const NSInteger kPMTag = 14;
 	
 	PulseCircleView *amCircle = (PulseCircleView *)[self.view viewWithTag:kAMTag];
 	PulseCircleView *pmCircle = (PulseCircleView *)[self.view viewWithTag:kPMTag];
-	if(afternoon)
+	if (afternoon)
 	{
 		[amCircle hide];
 		[pmCircle show];
@@ -114,24 +114,24 @@ static const NSInteger kPMTag = 14;
 
 - (void)_layoutMinutes:(NSInteger)mins
 {
-	if(self.minutes == mins)
+	if (self.minutes == mins)
 		return;
 	
 	NSInteger rightNumber = mins % 10;
 	NSInteger leftNumber = (mins - rightNumber) / 10;
 	
 	// left
-	for(NSInteger i = 0; i < 6; i++)
+	for (NSInteger i = 0; i < 6; i++)
 	{
 		PulseCircleView *circ = (PulseCircleView *)[self.view viewWithTag:15 + i];
 		
-		if(leftNumber == 0)
+		if (leftNumber == 0)
 		{
 			[circ show];
 		}
 		else
 		{
-			if(i <= leftNumber - 1)
+			if (i <= leftNumber - 1)
 				[circ show];
 			else
 				[circ hide];
@@ -139,17 +139,17 @@ static const NSInteger kPMTag = 14;
 	}
 	
 	// right
-	for(NSInteger i = 0; i < 10; i++)
+	for (NSInteger i = 0; i < 10; i++)
 	{
 		PulseCircleView *circ = (PulseCircleView *)[self.view viewWithTag:21 + i];
 		
-		if(rightNumber == 0)
+		if (rightNumber == 0)
 		{
 			[circ show];
 		}
 		else
 		{
-			if(i <= rightNumber - 1)
+			if (i <= rightNumber - 1)
 				[circ show];
 			else
 				[circ hide];
@@ -189,7 +189,7 @@ static const NSInteger kPMTag = 14;
 
 - (void)_startTimer
 {
-	if(self.timer)
+	if (self.timer)
 		return;
 	
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
@@ -201,7 +201,7 @@ static const NSInteger kPMTag = 14;
 
 - (void)_stopTimer
 {
-	if(self.timer)
+	if (self.timer)
 	{
 		[self.timer invalidate];
 		self.timer = nil;
@@ -213,7 +213,7 @@ static const NSInteger kPMTag = 14;
 
 - (void)_handleDoubleTap:(UITapGestureRecognizer *)sender
 {
-	if(sender.state == UIGestureRecognizerStateEnded)
+	if (sender.state == UIGestureRecognizerStateEnded)
 	{
 		[self.menuView startAnimations];
 		
@@ -231,7 +231,7 @@ static const NSInteger kPMTag = 14;
 	self.colorScheme = scheme;
 	self.view.backgroundColor = scheme.secondaryColor;
 	
-	for(AbstractCircle *circle in [self.reactiveCircleView subviews])
+	for (AbstractCircle *circle in [self.reactiveCircleView subviews])
 	{
 		circle.color = scheme.primaryColor;
 	}
@@ -252,7 +252,7 @@ static const NSInteger kPMTag = 14;
 {
 	__block UIImageView *startupImageView = nil;
 	
-	if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 		startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default-Portrait"]];
 	else
 		startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
@@ -345,9 +345,9 @@ static const NSInteger kPMTag = 14;
 
 - (void)startAllCircleAnimations
 {
-	for(id view in [self.reactiveCircleView subviews])
+	for (id view in [self.reactiveCircleView subviews])
 	{
-		if([view isKindOfClass:[PulseCircleView class]])
+		if ([view isKindOfClass:[PulseCircleView class]])
 		{
 			PulseCircleView *circle = view;
 			
@@ -361,9 +361,9 @@ static const NSInteger kPMTag = 14;
 
 - (void)stopAllCircleAnimations
 {
-	for(id view in [self.reactiveCircleView subviews])
+	for (id view in [self.reactiveCircleView subviews])
 	{
-		if([view isKindOfClass:[PulseCircleView class]])
+		if ([view isKindOfClass:[PulseCircleView class]])
 		{
 			PulseCircleView *circle = view;
 			

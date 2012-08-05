@@ -116,7 +116,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 
 - (void)_touchUpInside
 {
-	if([self.delegate respondsToSelector:@selector(touchUpInCircleView:)])
+	if ([self.delegate respondsToSelector:@selector(touchUpInCircleView:)])
 		[self.delegate touchUpInCircleView:self];
 
 	[self startAnimation];
@@ -159,7 +159,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 		self.circle4.userInteractionEnabled = self.circle1.userInteractionEnabled;
 		[self addSubview:self.circle4];
 				
-		if(buttonUsed)
+		if (buttonUsed)
 		{
 			self.button = [UIButton buttonWithType:UIButtonTypeCustom];
 			self.button.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
@@ -168,7 +168,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 			[self.button addTarget:self action:@selector(_touchUpInside) forControlEvents:UIControlEventTouchUpInside];
 			[self addSubview:self.button];
 			
-			if(titleText)
+			if (titleText)
 				[self.button setTitle:titleText forState:UIControlStateNormal];
 		}
 		
@@ -188,10 +188,10 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 
 - (void)startAnimation
 {
-	if(self.timer || self.circleHidden)
+	if (self.timer || self.circleHidden)
 		return;
 	
-	if(self.frequency < 0.001)
+	if (self.frequency < 0.001)
 		self.frequency = kDefaultFrequency;
 	
 	[self _performAnimation];
@@ -203,10 +203,10 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 
 - (void)stopAnimation
 {
-	if(self.circleHidden)
+	if (self.circleHidden)
 		return;
 	
-	if(self.timer)
+	if (self.timer)
 	{
 		[self.timer invalidate];
 		self.timer = nil;
@@ -216,7 +216,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 
 - (void)hide
 {
-	if(self.circleHidden)
+	if (self.circleHidden)
 		return;
 	
 	[self stopAnimation];
@@ -227,7 +227,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 
 - (void)show
 {
-	if(!self.circleHidden)
+	if ( ! self.circleHidden)
 		return;
 	
 	[self _forceCircleDisplay];
@@ -239,7 +239,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 
 - (void)resetImmediately
 {
-	if(self.circleHidden)
+	if (self.circleHidden)
 		return;
 	
 	[self stopAnimation];
@@ -275,7 +275,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 
 - (void)setSelected:(BOOL)newSelected
 {
-	if(newSelected)
+	if (newSelected)
 	{
 		self.circle1.alpha = 0.50;
 		self.circle2.alpha = self.circle1.alpha;
