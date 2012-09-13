@@ -229,7 +229,12 @@ static const NSInteger kPMTag = 14;
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 		startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default-Portrait"]];
 	else
-		startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
+	{
+		if (self.view.frame.size.height > 480.0)
+			startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default-568h"]];
+		else
+			startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
+	}
 	
 	startupImageView.frame = CGRectMake(0, 0, startupImageView.image.size.width, startupImageView.image.size.height);
 	[self.view addSubview:startupImageView];

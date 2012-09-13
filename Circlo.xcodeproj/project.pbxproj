@@ -28,6 +28,7 @@
 		9052857E13C7291C0041EAD0 /* bg.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9052857D13C7291C0041EAD0 /* bg.m4a */; };
 		9063BE5A139B763600DC6E84 /* ReactiveCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9063BE59139B763600DC6E84 /* ReactiveCircleView.m */; };
 		90A385A71372630000D25965 /* PulseCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A385A61372630000D25965 /* PulseCircleView.m */; };
+		90B1F7CE1601AB0A0080A74C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B1F7CD1601AB0A0080A74C /* Default-568h@2x.png */; };
 		90E064B913A871B400E7F1E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E064B813A871B400E7F1E6 /* QuartzCore.framework */; };
 		90E21751139E6E7E00621116 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21750139E6E7E00621116 /* Circle.m */; };
 		90E21754139E714300621116 /* AbstractCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21753139E714300621116 /* AbstractCircle.m */; };
@@ -106,6 +107,7 @@
 		9063BE59139B763600DC6E84 /* ReactiveCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactiveCircleView.m; sourceTree = "<group>"; };
 		90A385A51372630000D25965 /* PulseCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseCircleView.h; sourceTree = "<group>"; };
 		90A385A61372630000D25965 /* PulseCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseCircleView.m; sourceTree = "<group>"; };
+		90B1F7CD1601AB0A0080A74C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		90E064B813A871B400E7F1E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		90E2174F139E6E7E00621116 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
 		90E21750139E6E7E00621116 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 		90B57123149155F200C70A04 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				90B1F7CD1601AB0A0080A74C /* Default-568h@2x.png */,
 				904113F8154BFB77006503EB /* Default-Portrait@2x~ipad.png */,
 				904113F6154BFB73006503EB /* Default-Portrait~ipad.png */,
 				904113F4154BFB68006503EB /* Default@2x.png */,
@@ -482,6 +485,7 @@
 				904113F5154BFB68006503EB /* Default@2x.png in Resources */,
 				904113F7154BFB73006503EB /* Default-Portrait~ipad.png in Resources */,
 				904113F9154BFB77006503EB /* Default-Portrait@2x~ipad.png in Resources */,
+				90B1F7CE1601AB0A0080A74C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
