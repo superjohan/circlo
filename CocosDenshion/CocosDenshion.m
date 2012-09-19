@@ -276,7 +276,7 @@ static BOOL _mixerRateSet = NO;
 {
 	CDLOGINFO(@"Denshion::CDSoundEngine freeing source groups");
 	if(_sourceGroups) {
-		for (int i=0; i < _sourceGroupTotal; i++) {
+		for (NSUInteger i=0; i < _sourceGroupTotal; i++) {
 			if (_sourceGroups[i].sourceStatuses) {
 				free(_sourceGroups[i].sourceStatuses);
 				CDLOGINFO(@"Denshion::CDSoundEngine freed source statuses %i",i);
@@ -307,7 +307,7 @@ static BOOL _mixerRateSet = NO;
 	
 	_sourceGroupTotal = total;
 	int sourceCount = 0;
-	for (int i=0; i < _sourceGroupTotal; i++) {
+	for (NSUInteger i=0; i < _sourceGroupTotal; i++) {
 		
 		_sourceGroups[i].startIndex = 0;
 		_sourceGroups[i].currentIndex = _sourceGroups[i].startIndex;
@@ -722,7 +722,7 @@ static BOOL _mixerRateSet = NO;
 
 -(void) _lockSource:(int) sourceIndex lock:(BOOL) lock {
 	BOOL found = NO;
-	for (int i=0; i < _sourceGroupTotal && !found; i++) {
+	for (NSUInteger i=0; i < _sourceGroupTotal && !found; i++) {
 		if (_sourceGroups[i].sourceStatuses) {
 			for (int j=0; j < _sourceGroups[i].totalSources && !found; j++) {
 				//First bit is used to indicate whether source is locked, index is shifted back 1 bit
@@ -744,7 +744,7 @@ static BOOL _mixerRateSet = NO;
 -(int) _getSourceIndexForSourceGroup:(int)sourceGroupId 
 {
 	//Ensure source group id is valid to prevent memory corruption
-	if (sourceGroupId < 0 || sourceGroupId >= _sourceGroupTotal) {
+	if (sourceGroupId < 0 || sourceGroupId >= (int)_sourceGroupTotal) {
 		CDLOG(@"Denshion::CDSoundEngine invalid source group id %i",sourceGroupId);
 		return CD_NO_SOURCE;
 	}	
@@ -936,7 +936,7 @@ static BOOL _mixerRateSet = NO;
  */
 - (void) stopSourceGroup:(int) sourceGroupId {
 	
-	if (!functioning_ || sourceGroupId >= _sourceGroupTotal || sourceGroupId < 0) {
+	if (!functioning_ || sourceGroupId >= (int)_sourceGroupTotal || sourceGroupId < 0) {
 		return;
 	}	
 	int sourceCount = _sourceGroups[sourceGroupId].totalSources;
@@ -973,7 +973,7 @@ static BOOL _mixerRateSet = NO;
  */
 - (void) setSourceGroupNonInterruptible:(int) sourceGroupId isNonInterruptible:(BOOL) isNonInterruptible {
 	//Ensure source group id is valid to prevent memory corruption
-	if (sourceGroupId < 0 || sourceGroupId >= _sourceGroupTotal) {
+	if (sourceGroupId < 0 || sourceGroupId >= (int)_sourceGroupTotal) {
 		CDLOG(@"Denshion::CDSoundEngine setSourceGroupNonInterruptible invalid source group id %i",sourceGroupId);
 		return;
 	}	
@@ -994,7 +994,7 @@ static BOOL _mixerRateSet = NO;
  */
 - (void) setSourceGroupEnabled:(int) sourceGroupId enabled:(BOOL) enabled {
 	//Ensure source group id is valid to prevent memory corruption
-	if (sourceGroupId < 0 || sourceGroupId >= _sourceGroupTotal) {
+	if (sourceGroupId < 0 || sourceGroupId >= (int)_sourceGroupTotal) {
 		CDLOG(@"Denshion::CDSoundEngine setSourceGroupEnabled invalid source group id %i",sourceGroupId);
 		return;
 	}	
