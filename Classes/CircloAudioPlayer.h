@@ -14,6 +14,6 @@
 - (void)loadSound:(NSString *)filename;
 - (void)playSound:(NSString *)filename loop:(BOOL)loop;
 - (void)stopSound:(NSString *)filename;
-- (void)setVolume:(double)volume forSound:(NSString *)filename;
+- (void)setVolume:(float)volume forSound:(NSString *)filename;
 
 @end
