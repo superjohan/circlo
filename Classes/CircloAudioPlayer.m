@@ -56,28 +56,39 @@
 
 - (AVAudioPlayer *)_freePlayerForFilename:(NSString *)filename
 {
-	AVAudioPlayer *player = nil;
-	NSArray *players = self.players[filename];
-	
-	for (AVAudioPlayer *audioPlayer in players)
-	{
+	__block AVAudioPlayer *player = nil;
+		
+	[self _performBlockOnAudioPlayers:filename block:^(AVAudioPlayer *audioPlayer, BOOL *stop) {
 		if (audioPlayer.playing == NO)
 		{
 			player = audioPlayer;
-			break;
+			
+			*stop = YES;
 		}
-	}
+		
+		if (player == nil || audioPlayer.currentTime > player.currentTime)
+		{
+			player = audioPlayer;
+		}
+	}];
 	
 	return player;
 }
 
-- (void)_performBlockOnAudioPlayers:(NSString *)filename block:(void (^)(AVAudioPlayer *))block
+- (void)_performBlockOnAudioPlayers:(NSString *)filename block:(void (^)(AVAudioPlayer *, BOOL *stop))block
 {
 	NSArray *players = self.players[filename];
 	
 	for (AVAudioPlayer *player in players)
 	{
-		block(player);
+		BOOL shouldStop = NO;
+		
+		block(player, &shouldStop);
+		
+		if (shouldStop == YES)
+		{
+			break;
+		}
 	}
 }
 
@@ -114,7 +125,7 @@
 	}
 	
 	NSMutableArray *players = [NSMutableArray array];
-	NSInteger playerCount = multitrack ? 3 : 1;
+	NSInteger playerCount = multitrack ? 2 : 1;
 	NSURL *url = [self _urlForFilename:filename];
 	
 	for (NSInteger i = 0; i < playerCount; i++)
@@ -152,14 +163,14 @@
 
 - (void)stopSound:(NSString *)filename
 {
-	[self _performBlockOnAudioPlayers:filename block:^(AVAudioPlayer *player) {
+	[self _performBlockOnAudioPlayers:filename block:^(AVAudioPlayer *player, BOOL *stop) {
 		[player stop];
 	}];
 }
 
 - (void)setVolume:(float)volume forSound:(NSString *)filename
 {
-	[self _performBlockOnAudioPlayers:filename block:^(AVAudioPlayer *player) {
+	[self _performBlockOnAudioPlayers:filename block:^(AVAudioPlayer *player, BOOL *stop) {
 		player.volume = volume;
 	}];
 }
