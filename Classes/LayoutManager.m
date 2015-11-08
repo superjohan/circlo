@@ -67,22 +67,22 @@
 			
 			if (tagCounter > 0 && tagCounter < 13)
 			{
-				circ.soundType = kSoundTypeHours;
+				circ.soundType = CircloSoundTypeHours;
 				circ.soundNumber = tagCounter;
 			}
 			else if (tagCounter >= 13 && tagCounter < 15)
 			{
-				circ.soundType = kSoundTypeAMPM;
+				circ.soundType = CircloSoundTypeAMPM;
 				circ.soundNumber = tagCounter - 12;
 			}
 			else if (tagCounter >= 15 && tagCounter < 21)
 			{
-				circ.soundType = kSoundTypeMinutesLeft;
+				circ.soundType = CircloSoundTypeMinutesLeft;
 				circ.soundNumber = tagCounter - 14;
 			}
 			else if (tagCounter >= 21 && tagCounter < 31)
 			{
-				circ.soundType = kSoundTypeMinutesRight;
+				circ.soundType = CircloSoundTypeMinutesRight;
 				circ.soundNumber = tagCounter - 20;
 			}
 			

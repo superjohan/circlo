@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum
+typedef NS_ENUM(NSInteger, CircloSoundType)
 {
-	kSoundTypeHours = 1,
-	kSoundTypeAMPM,
-	kSoundTypeMinutesLeft,
-	kSoundTypeMinutesRight
-} CircloSoundType;
+	CircloSoundTypeHours = 1,
+	CircloSoundTypeAMPM,
+	CircloSoundTypeMinutesLeft,
+	CircloSoundTypeMinutesRight
+};
 
 @interface SoundManager : NSObject
 
