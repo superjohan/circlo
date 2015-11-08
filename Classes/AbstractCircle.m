@@ -27,8 +27,10 @@
 
 - (void)moveCircleWithDelta:(NSTimeInterval)delta
 {
-	if ( ! self.animating)
+	if (self.animating == NO)
+	{
 		return;
+	}
 	
 	self.currentTime += delta;
 	

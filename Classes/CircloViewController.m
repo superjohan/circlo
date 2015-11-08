@@ -39,13 +39,19 @@ static const NSInteger kPMTag = 14;
 - (NSString *)_buttonTextForTag:(NSInteger)tag
 {
 	if (tag < kMaxHoursTag)
+	{
 		return [NSString stringWithFormat:@"%ld", kMaxHoursTag - tag];
+	}
 	
 	if (tag == kAMTag)
+	{
 		return NSLocalizedString(@"AM", nil);
+	}
 	
 	if (tag == kPMTag)
+	{
 		return NSLocalizedString(@"PM", nil);
+	}
 	
 	return [NSString stringWithFormat:@"%ld", tag];
 }
@@ -53,7 +59,9 @@ static const NSInteger kPMTag = 14;
 - (void)_layoutHours:(NSInteger)hrs
 {
 	if (self.hours == hrs)
+	{
 		return;
+	}
 	
 	BOOL afternoon = NO;
 	if (hrs == 0)
@@ -65,7 +73,9 @@ static const NSInteger kPMTag = 14;
 		afternoon = YES;
 
 		if (hrs > 12)
+		{
 			hrs = hrs - 12;
+		}
 	}
 	
 	for (NSInteger i = 1; i < kMaxHoursTag; i++)
@@ -73,9 +83,13 @@ static const NSInteger kPMTag = 14;
 		PulseCircleView *circ = (PulseCircleView *)[self.view viewWithTag:kMaxHoursTag - i];
 		
 		if (i <= hrs)
+		{
 			[circ show];
+		}
 		else
+		{
 			[circ hide];
+		}
 	}
 	
 	PulseCircleView *amCircle = (PulseCircleView *)[self.view viewWithTag:kAMTag];
@@ -97,7 +111,9 @@ static const NSInteger kPMTag = 14;
 - (void)_layoutMinutes:(NSInteger)mins
 {
 	if (self.minutes == mins)
+	{
 		return;
+	}
 	
 	NSInteger rightNumber = mins % 10;
 	NSInteger leftNumber = (mins - rightNumber) / 10;
@@ -132,9 +148,13 @@ static const NSInteger kPMTag = 14;
 		else
 		{
 			if (i <= rightNumber - 1)
+			{
 				[circ show];
+			}
 			else
+			{
 				[circ hide];
+			}
 		}
 	}
 	
@@ -169,7 +189,9 @@ static const NSInteger kPMTag = 14;
 - (void)_startTimer
 {
 	if (self.timer)
+	{
 		return;
+	}
 	
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
 
@@ -227,13 +249,19 @@ static const NSInteger kPMTag = 14;
 	__block UIImageView *startupImageView = nil;
 	
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+	{
 		startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default-Portrait"]];
+	}
 	else
 	{
 		if (self.view.frame.size.height > 480.0)
+		{
 			startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default-568h"]];
+		}
 		else
+		{
 			startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
+		}
 	}
 	
 	startupImageView.frame = CGRectMake(0, 0, startupImageView.image.size.width, startupImageView.image.size.height);
@@ -303,8 +331,7 @@ static const NSInteger kPMTag = 14;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait ||
-			interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 
 - (void)dealloc 

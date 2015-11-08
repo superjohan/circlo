@@ -22,8 +22,10 @@
 	double b = destinationPoint.y - originPoint.y;
 	double c = sqrt(pow(a, 2) + pow(b, 2));
 
-	if (c == 0) 
+	if (c == 0)
+	{
 		return 0.00001; // this is only to prevent a division by zero
+	}
 	
 	return c;
 }
@@ -50,11 +52,13 @@
 	CGPoint newPoint = CGPointMake(x, y);
 
 	if (fabs(newPoint.x - circle.center.x) < 0.000001 && fabs(newPoint.y - circle.center.y) < 0.000001)
+	{
 		return;
+	}
 	
 	circle.center = newPoint;
 
-	if ( ! [circle isKindOfClass:[PulseCircleView class]])
+	if ([circle isKindOfClass:[PulseCircleView class]] == NO)
 	{
 		CGFloat sizeRatio = (distance / maxDistance) < 1 ? (distance / maxDistance) : 1;
 
@@ -65,12 +69,16 @@
 - (void)_returnCircleToNormal:(AbstractCircle *)circle
 {
 	if (fabs(circle.savedCenter.x - circle.center.x) < 0.000001 && fabs(circle.savedCenter.y - circle.center.y) < 0.000001)
+	{
 		return;
+	}
 	
 	circle.center = circle.savedCenter;
 
-	if ( ! [circle isKindOfClass:[PulseCircleView class]])
+	if ([circle isKindOfClass:[PulseCircleView class]] == NO)
+	{
 		circle.frame = CGRectMake(circle.savedFrame.origin.x, circle.savedFrame.origin.y, circle.savedFrame.size.width, circle.savedFrame.size.height);
+	}
 }
 
 - (void)_moveCirclesInReactionToPoint:(CGPoint)point

@@ -94,7 +94,9 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 - (void)_touchUpInside
 {
 	if ([self.delegate respondsToSelector:@selector(touchUpInCircleView:)])
+	{
 		[self.delegate touchUpInCircleView:self];
+	}
 
 	[self startAnimation];
 }
@@ -143,7 +145,9 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 			[self addSubview:self.button];
 			
 			if (titleText)
+			{
 				[self.button setTitle:titleText forState:UIControlStateNormal];
+			}
 		}
 		
 		self.opaque = NO;
@@ -160,10 +164,14 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 - (void)startAnimation
 {
 	if (self.timer || self.circleHidden)
+	{
 		return;
+	}
 	
 	if (self.frequency < 0.001)
+	{
 		self.frequency = kDefaultFrequency;
+	}
 	
 	[self _performAnimation];
 	
@@ -174,7 +182,9 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 - (void)stopAnimation
 {
 	if (self.circleHidden)
+	{
 		return;
+	}
 	
 	if (self.timer)
 	{
@@ -186,7 +196,9 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 - (void)hide
 {
 	if (self.circleHidden)
+	{
 		return;
+	}
 	
 	[self stopAnimation];
 	[self _performHide];
@@ -196,8 +208,10 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 
 - (void)show
 {
-	if ( ! self.circleHidden)
+	if (self.circleHidden == NO)
+	{
 		return;
+	}
 	
 	[self _forceCircleDisplay];
 	[self _performShow];
@@ -208,7 +222,9 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 - (void)resetImmediately
 {
 	if (self.circleHidden)
+	{
 		return;
+	}
 	
 	[self stopAnimation];
 	

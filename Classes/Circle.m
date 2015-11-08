@@ -21,6 +21,7 @@
 		self.savedCenter = self.center;
 		self.savedFrame = frame;
     }
+	
     return self;
 }
 

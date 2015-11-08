@@ -30,7 +30,9 @@
 - (void)_overlayButtonTouched:(id)sender
 {
 	if ([self.delegate respondsToSelector:@selector(overlayButtonTouchedInMenuView:)])
+	{
 		[self.delegate overlayButtonTouchedInMenuView:self];
+	}
 }
 
 - (void)_setSoundSelection
@@ -59,9 +61,13 @@
 		PulseCircleView *circle = (PulseCircleView *)[self viewWithTag:i];
 		
 		if (i == scheme.colorSchemeType)
+		{
 			circle.selected = YES;
+		}
 		else
+		{
 			circle.selected = NO;
+		}
 	}
 	
 	[self _setSoundSelection];
@@ -74,7 +80,9 @@
 	if (circleView.tag > 0 && circleView.tag < 6)
 	{
 		if ([self.delegate respondsToSelector:@selector(menuView:changedToColorScheme:)])
+		{
 			[self _setColorScheme:[self.delegate menuView:self changedToColorScheme:circleView.tag]];
+		}
 	}
 	
 	if (circleView.tag == kSoundCircleTag)

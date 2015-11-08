@@ -24,9 +24,13 @@
 	CGFloat circleSize = 0;
 	
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+	{
 		circleSize = iPadCircleSize;
+	}
 	else
+	{
 		circleSize = iPhoneCircleSize;
+	}
 	
 	CGFloat xPadding = (view.bounds.size.width - (5 * circleSize)) / 2.0;
 	CGFloat yPadding = (view.bounds.size.height - (6 * circleSize)) / 2.0;
@@ -98,9 +102,13 @@
 	CGFloat circleSize = 0;
 	
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+	{
 		circleSize = iPadCircleSize;
+	}
 	else
+	{
 		circleSize = iPhoneCircleSize;
+	}
 	
 	for (NSInteger i = 0; i < 10; i++)
 	{
