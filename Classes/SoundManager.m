@@ -60,7 +60,7 @@
 {
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsSoundEnabled])
 	{
-		[[CircloAudioPlayer sharedPlayer] playSound:[NSString stringWithFormat:@"%ld-%ld.caf", soundType, (long)number] loop:NO];
+		[[CircloAudioPlayer sharedPlayer] playSound:[NSString stringWithFormat:@"%ld-%ld.caf", (long)soundType, (long)number] loop:NO];
 	}
 }
 
