@@ -170,6 +170,7 @@
 {
 	[self _performBlockOnAudioPlayers:filename block:^(AVAudioPlayer *player, BOOL *stop) {
 		[player stop];
+		player.currentTime = 0;
 	}];
 }
 
