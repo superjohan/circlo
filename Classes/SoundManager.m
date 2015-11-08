@@ -7,8 +7,6 @@
 //
 
 #import "SoundManager.h"
-#import "CocosDenshion.h"
-#import "SimpleAudioEngine.h"
 #import "CircloConstants.h"
 
 @implementation SoundManager
