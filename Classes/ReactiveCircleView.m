@@ -43,7 +43,8 @@
 
 - (void)_moveCircle:(AbstractCircle *)circle inReactionToPoint:(CGPoint)point
 {
-	CGFloat maxDistance = self.frame.size.width / 2.0;
+	CGFloat length = MIN(self.frame.size.width, self.frame.size.height);
+	CGFloat maxDistance = length / 2.0;
 	double distance = [self _distanceFromPoint:circle.savedCenter toPoint:point];
 	double difference = maxDistance - distance > 0 ? maxDistance - distance : 0;
 	double ratio = difference / distance;
