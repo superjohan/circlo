@@ -131,6 +131,11 @@
 	for (NSInteger i = 0; i < playerCount; i++)
 	{
 		AVAudioPlayer *player = [self _audioPlayerForURL:url];
+		if (player == nil)
+		{
+			return;
+		}
+		
 		[players addObject:player];
 	}
 	
