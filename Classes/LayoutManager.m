@@ -23,7 +23,7 @@
 	CGFloat iPadCircleSize = 130.0;
 	CGFloat circleSize = 0;
 	
-	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+	if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
 	{
 		circleSize = iPadCircleSize;
 	}
@@ -60,7 +60,7 @@
 			circ.amplitude = amplitude;
 			
 			NSInteger frequencyIndex = arc4random() % frequencies.count;
-			circ.frequency = [[frequencies objectAtIndex:frequencyIndex] doubleValue];
+			circ.frequency = [frequencies[frequencyIndex] doubleValue];
 			[frequencies removeObjectAtIndex:frequencyIndex];
 
 			circ.tag = tagCounter;
@@ -101,7 +101,7 @@
 	CGFloat iPadCircleSize = 130.0; // FIXME
 	CGFloat circleSize = 0;
 	
-	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+	if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
 	{
 		circleSize = iPadCircleSize;
 	}

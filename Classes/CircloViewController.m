@@ -166,21 +166,21 @@ static const NSInteger kPMTag = 14;
 	self.hourFormatter = [[NSDateFormatter alloc] init];
 	self.minuteFormatter = [[NSDateFormatter alloc] init];
 	
-	[self.hourFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"fi_FI"]];
-	[self.minuteFormatter setLocale:self.hourFormatter.locale];
+	self.hourFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"fi_FI"];
+	self.minuteFormatter.locale = self.hourFormatter.locale;
 	
-	[self.hourFormatter setDateFormat:@"HH"];
-	[self.minuteFormatter setDateFormat:@"mm"];
+	self.hourFormatter.dateFormat = @"HH";
+	self.minuteFormatter.dateFormat = @"mm";
 }
 
 - (void)_updateClock:(NSTimer *)timer
 {
 	NSDate *date = [NSDate date];
 
-	NSInteger hrs = [[self.hourFormatter stringFromDate:date] integerValue];
+	NSInteger hrs = [self.hourFormatter stringFromDate:date].integerValue;
 	[self _layoutHours:hrs];
 	
-	NSInteger mins = [[self.minuteFormatter stringFromDate:date] integerValue];
+	NSInteger mins = [self.minuteFormatter stringFromDate:date].integerValue;
 	[self _layoutMinutes:mins];
 	
 	[SoundManager updateBackgroundMusicVolumeWithHours:hrs minutes:mins];
@@ -229,7 +229,7 @@ static const NSInteger kPMTag = 14;
 	self.colorScheme = scheme;
 	self.view.backgroundColor = scheme.secondaryColor;
 	
-	for (AbstractCircle *circle in [self.reactiveCircleView subviews])
+	for (AbstractCircle *circle in (self.reactiveCircleView).subviews)
 	{
 		circle.color = scheme.primaryColor;
 	}
@@ -248,7 +248,7 @@ static const NSInteger kPMTag = 14;
 {
 	__block UIImageView *startupImageView = nil;
 	
-	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+	if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
 	{
 		startupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default-Portrait"]];
 	}
@@ -341,7 +341,7 @@ static const NSInteger kPMTag = 14;
 
 - (void)startAllCircleAnimations
 {
-	for (id view in [self.reactiveCircleView subviews])
+	for (id view in (self.reactiveCircleView).subviews)
 	{
 		if ([view isKindOfClass:[PulseCircleView class]])
 		{
@@ -356,7 +356,7 @@ static const NSInteger kPMTag = 14;
 
 - (void)stopAllCircleAnimations
 {
-	for (id view in [self.reactiveCircleView subviews])
+	for (id view in (self.reactiveCircleView).subviews)
 	{
 		if ([view isKindOfClass:[PulseCircleView class]])
 		{

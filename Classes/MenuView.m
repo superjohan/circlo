@@ -94,7 +94,7 @@
 
 #pragma mark - Public
 
-- (id)initWithFrame:(CGRect)frame colorScheme:(ColorScheme *)scheme
+- (instancetype)initWithFrame:(CGRect)frame colorScheme:(ColorScheme *)scheme
 {
     if ((self = [super initWithFrame:frame]))
 	{

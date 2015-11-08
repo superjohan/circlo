@@ -102,7 +102,7 @@
 	double firstDecimal = (double)hours / 12.0;
 	double secondDecimal = (hours < 12) ? ((double)minutes / 60.0) / 10.0 : 0;
 	
-	[[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:(firstDecimal + secondDecimal)];
+	[SimpleAudioEngine sharedEngine].backgroundMusicVolume = (firstDecimal + secondDecimal);
 }
 
 @end

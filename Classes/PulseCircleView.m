@@ -111,7 +111,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 
 #pragma mark - Public
 
-- (id)initWithFrame:(CGRect)frame title:(NSString *)titleText button:(BOOL)buttonUsed
+- (instancetype)initWithFrame:(CGRect)frame title:(NSString *)titleText button:(BOOL)buttonUsed
 {
     if ((self = [super initWithFrame:frame])) 
 	{		
@@ -251,7 +251,7 @@ static const NSTimeInterval kDefaultFrequency = 0.6;
 	
 	[self _forceCircleDisplay];
 	
-	[super setColor:newColor];
+	super.color = newColor;
 }
 
 - (void)setSelected:(BOOL)selected

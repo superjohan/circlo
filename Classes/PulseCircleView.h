@@ -21,7 +21,9 @@
 @property (nonatomic) NSInteger soundNumber;
 @property (nonatomic) BOOL selected;
 
-- (id)initWithFrame:(CGRect)frame title:(NSString *)titleText button:(BOOL)button;
+- (instancetype)initWithFrame:(CGRect)frame title:(NSString *)titleText button:(BOOL)button NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 - (void)startAnimation;
 - (void)stopAnimation;
 - (void)hide;

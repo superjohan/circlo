@@ -25,7 +25,9 @@ enum
 
 @property (nonatomic, weak) id delegate;
 
-- (id)initWithFrame:(CGRect)frame colorScheme:(ColorScheme *)scheme;
+- (instancetype)initWithFrame:(CGRect)frame colorScheme:(ColorScheme *)scheme NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 - (void)startAnimations;
 - (void)stopAnimations;
 

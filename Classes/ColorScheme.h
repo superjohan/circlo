@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, CircloColorSchemeType)
 @property (nonatomic) UIColor *secondaryColor;
 @property (nonatomic) CircloColorSchemeType colorSchemeType;
 
-- (id)initWithColorScheme:(CircloColorSchemeType)schemeType;
+- (instancetype)initWithColorScheme:(CircloColorSchemeType)schemeType NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end

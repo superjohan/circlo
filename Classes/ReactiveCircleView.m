@@ -89,7 +89,7 @@
 	__weak ReactiveCircleView *bself = self;
 	
 	[UIView animateWithDuration:duration delay:0 options:opts animations:^{
-		for (id view in [bself subviews])
+		for (id view in bself.subviews)
 		{
 			if ([view isKindOfClass:[PulseCircleView class]] || [view isKindOfClass:[Circle class]])
 			{
@@ -110,7 +110,7 @@
 	__weak ReactiveCircleView *bself = self;
 	
 	[UIView animateWithDuration:duration delay:0 options:opts animations:^{
-		for (id view in [bself subviews])
+		for (id view in bself.subviews)
 		{
 			if ([view isKindOfClass:[PulseCircleView class]] || [view isKindOfClass:[Circle class]])
 			{
@@ -125,7 +125,7 @@
 
 - (void)_timerFired:(CADisplayLink *)sender
 {
-	for (id view in [self subviews])
+	for (id view in self.subviews)
 	{
 		if ([view isKindOfClass:[PulseCircleView class]] || [view isKindOfClass:[Circle class]])
 		{
@@ -138,7 +138,7 @@
 
 #pragma mark - Public
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     if ((self = [super initWithFrame:frame]))
 	{

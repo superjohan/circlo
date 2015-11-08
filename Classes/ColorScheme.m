@@ -70,7 +70,7 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 
 #pragma mark - Public
 
-- (id)initWithColorScheme:(CircloColorSchemeType)schemeType
+- (instancetype)initWithColorScheme:(CircloColorSchemeType)schemeType
 {
 	if ((self = [super init]))
 	{
