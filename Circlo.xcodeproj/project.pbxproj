@@ -28,6 +28,16 @@
 		90CD74271BEF1BC8006D8E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90CD74261BEF1BC8006D8E1F /* Assets.xcassets */; };
 		90CD743D1BEF24DB006D8E1F /* CircloAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CD743C1BEF24DB006D8E1F /* CircloAudioPlayer.m */; };
 		90CD743E1BEF24E0006D8E1F /* CircloAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CD743C1BEF24DB006D8E1F /* CircloAudioPlayer.m */; };
+		90CD74401BEF251A006D8E1F /* AbstractCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21753139E714300621116 /* AbstractCircle.m */; };
+		90CD74411BEF251A006D8E1F /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21750139E6E7E00621116 /* Circle.m */; };
+		90CD74421BEF251A006D8E1F /* PulseCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A385A61372630000D25965 /* PulseCircleView.m */; };
+		90CD74431BEF251A006D8E1F /* ReactiveCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9063BE59139B763600DC6E84 /* ReactiveCircleView.m */; };
+		90CD74441BEF251A006D8E1F /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E7145A13B22C7C00BDE5B2 /* MenuView.m */; };
+		90CD74451BEF251A006D8E1F /* CircloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* CircloViewController.m */; };
+		90CD74461BEF251A006D8E1F /* LayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90091B9113771588000E3143 /* LayoutManager.m */; };
+		90CD74471BEF251A006D8E1F /* ColorSchemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E9049813B2FD5B0055FBF0 /* ColorSchemeManager.m */; };
+		90CD74481BEF251A006D8E1F /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D2C913BB711600DC0827 /* SoundManager.m */; };
+		90CD74491BEF251A006D8E1F /* CircloConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1280913B999DB0071C83B /* CircloConstants.m */; };
 		90E064B913A871B400E7F1E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E064B813A871B400E7F1E6 /* QuartzCore.framework */; };
 		90E21751139E6E7E00621116 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21750139E6E7E00621116 /* Circle.m */; };
 		90E21754139E714300621116 /* AbstractCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21753139E714300621116 /* AbstractCircle.m */; };
@@ -538,10 +548,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90CD74401BEF251A006D8E1F /* AbstractCircle.m in Sources */,
+				90CD74481BEF251A006D8E1F /* SoundManager.m in Sources */,
 				90CD74221BEF1BC8006D8E1F /* ViewController.m in Sources */,
+				90CD74441BEF251A006D8E1F /* MenuView.m in Sources */,
 				90CD743E1BEF24E0006D8E1F /* CircloAudioPlayer.m in Sources */,
+				90CD74451BEF251A006D8E1F /* CircloViewController.m in Sources */,
+				90CD74421BEF251A006D8E1F /* PulseCircleView.m in Sources */,
+				90CD74461BEF251A006D8E1F /* LayoutManager.m in Sources */,
+				90CD74411BEF251A006D8E1F /* Circle.m in Sources */,
 				90CD741F1BEF1BC8006D8E1F /* AppDelegate.m in Sources */,
 				90CD741C1BEF1BC8006D8E1F /* main.m in Sources */,
+				90CD74491BEF251A006D8E1F /* CircloConstants.m in Sources */,
+				90CD74471BEF251A006D8E1F /* ColorSchemeManager.m in Sources */,
+				90CD74431BEF251A006D8E1F /* ReactiveCircleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +748,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = Circlo_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -773,6 +794,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = Circlo_Prefix.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -815,6 +837,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = Circlo_Prefix.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
