@@ -26,6 +26,18 @@
 		90CD74221BEF1BC8006D8E1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CD74211BEF1BC8006D8E1F /* ViewController.m */; };
 		90CD74251BEF1BC8006D8E1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90CD74231BEF1BC8006D8E1F /* Main.storyboard */; };
 		90CD74271BEF1BC8006D8E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90CD74261BEF1BC8006D8E1F /* Assets.xcassets */; };
+		90CD743D1BEF24DB006D8E1F /* CircloAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CD743C1BEF24DB006D8E1F /* CircloAudioPlayer.m */; };
+		90CD743E1BEF24E0006D8E1F /* CircloAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CD743C1BEF24DB006D8E1F /* CircloAudioPlayer.m */; };
+		90CD74401BEF251A006D8E1F /* AbstractCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21753139E714300621116 /* AbstractCircle.m */; };
+		90CD74411BEF251A006D8E1F /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21750139E6E7E00621116 /* Circle.m */; };
+		90CD74421BEF251A006D8E1F /* PulseCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A385A61372630000D25965 /* PulseCircleView.m */; };
+		90CD74431BEF251A006D8E1F /* ReactiveCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9063BE59139B763600DC6E84 /* ReactiveCircleView.m */; };
+		90CD74441BEF251A006D8E1F /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E7145A13B22C7C00BDE5B2 /* MenuView.m */; };
+		90CD74451BEF251A006D8E1F /* CircloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* CircloViewController.m */; };
+		90CD74461BEF251A006D8E1F /* LayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90091B9113771588000E3143 /* LayoutManager.m */; };
+		90CD74471BEF251A006D8E1F /* ColorSchemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E9049813B2FD5B0055FBF0 /* ColorSchemeManager.m */; };
+		90CD74481BEF251A006D8E1F /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D2C913BB711600DC0827 /* SoundManager.m */; };
+		90CD74491BEF251A006D8E1F /* CircloConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1280913B999DB0071C83B /* CircloConstants.m */; };
 		90E064B913A871B400E7F1E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E064B813A871B400E7F1E6 /* QuartzCore.framework */; };
 		90E21751139E6E7E00621116 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21750139E6E7E00621116 /* Circle.m */; };
 		90E21754139E714300621116 /* AbstractCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21753139E714300621116 /* AbstractCircle.m */; };
@@ -34,10 +46,6 @@
 		90E9049C13B2FE220055FBF0 /* ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E9049B13B2FE220055FBF0 /* ColorScheme.m */; };
 		90F1280713B997530071C83B /* Sniglet_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90F1280613B997530071C83B /* Sniglet_Regular.ttf */; };
 		90F1280A13B999DB0071C83B /* CircloConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1280913B999DB0071C83B /* CircloConstants.m */; };
-		90F2D27413BB68EF00DC0827 /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D26C13BB68EF00DC0827 /* CDAudioManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		90F2D27513BB68EF00DC0827 /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D26F13BB68EF00DC0827 /* CDOpenALSupport.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		90F2D27613BB68EF00DC0827 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D27113BB68EF00DC0827 /* CocosDenshion.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		90F2D27713BB68EF00DC0827 /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D27313BB68EF00DC0827 /* SimpleAudioEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		90F2D27C13BB696400DC0827 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2D27B13BB696400DC0827 /* AVFoundation.framework */; };
 		90F2D27E13BB696C00DC0827 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2D27D13BB696C00DC0827 /* AudioToolbox.framework */; };
 		90F2D28A13BB69CE00DC0827 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2D28913BB69CE00DC0827 /* OpenAL.framework */; };
@@ -106,6 +114,8 @@
 		90CD74241BEF1BC8006D8E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90CD74261BEF1BC8006D8E1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90CD74281BEF1BC8006D8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90CD743B1BEF24DB006D8E1F /* CircloAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircloAudioPlayer.h; path = Classes/CircloAudioPlayer.h; sourceTree = "<group>"; };
+		90CD743C1BEF24DB006D8E1F /* CircloAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircloAudioPlayer.m; path = Classes/CircloAudioPlayer.m; sourceTree = "<group>"; };
 		90E064B813A871B400E7F1E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		90E2174F139E6E7E00621116 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
 		90E21750139E6E7E00621116 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
@@ -120,15 +130,6 @@
 		90F1280613B997530071C83B /* Sniglet_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sniglet_Regular.ttf; path = Resources/Sniglet_Regular.ttf; sourceTree = "<group>"; };
 		90F1280813B999DB0071C83B /* CircloConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircloConstants.h; path = Classes/CircloConstants.h; sourceTree = "<group>"; };
 		90F1280913B999DB0071C83B /* CircloConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircloConstants.m; path = Classes/CircloConstants.m; sourceTree = "<group>"; };
-		90F2D26B13BB68EF00DC0827 /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
-		90F2D26C13BB68EF00DC0827 /* CDAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAudioManager.m; sourceTree = "<group>"; };
-		90F2D26D13BB68EF00DC0827 /* CDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConfig.h; sourceTree = "<group>"; };
-		90F2D26E13BB68EF00DC0827 /* CDOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOpenALSupport.h; sourceTree = "<group>"; };
-		90F2D26F13BB68EF00DC0827 /* CDOpenALSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDOpenALSupport.m; sourceTree = "<group>"; };
-		90F2D27013BB68EF00DC0827 /* CocosDenshion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosDenshion.h; sourceTree = "<group>"; };
-		90F2D27113BB68EF00DC0827 /* CocosDenshion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocosDenshion.m; sourceTree = "<group>"; };
-		90F2D27213BB68EF00DC0827 /* SimpleAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine.h; sourceTree = "<group>"; };
-		90F2D27313BB68EF00DC0827 /* SimpleAudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine.m; sourceTree = "<group>"; };
 		90F2D27B13BB696400DC0827 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		90F2D27D13BB696C00DC0827 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		90F2D27F13BB697700DC0827 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -266,7 +267,7 @@
 		90CD742D1BEF1BE6006D8E1F /* circlo */ = {
 			isa = PBXGroup;
 			children = (
-				90F2D26A13BB68EF00DC0827 /* CocosDenshion */,
+				90CD743F1BEF24EA006D8E1F /* Audio */,
 				90E9049D13B2FE270055FBF0 /* Model */,
 				90D3FE7E13B0DFF900422A56 /* Views */,
 				90D3FE7F13B0E02500422A56 /* View controllers */,
@@ -292,6 +293,15 @@
 				90F1280613B997530071C83B /* Sniglet_Regular.ttf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90CD743F1BEF24EA006D8E1F /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				90CD743B1BEF24DB006D8E1F /* CircloAudioPlayer.h */,
+				90CD743C1BEF24DB006D8E1F /* CircloAudioPlayer.m */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 		90D3FE7E13B0DFF900422A56 /* Views */ = {
@@ -344,22 +354,6 @@
 			);
 			name = Model;
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		90F2D26A13BB68EF00DC0827 /* CocosDenshion */ = {
-			isa = PBXGroup;
-			children = (
-				90F2D26B13BB68EF00DC0827 /* CDAudioManager.h */,
-				90F2D26C13BB68EF00DC0827 /* CDAudioManager.m */,
-				90F2D26D13BB68EF00DC0827 /* CDConfig.h */,
-				90F2D26E13BB68EF00DC0827 /* CDOpenALSupport.h */,
-				90F2D26F13BB68EF00DC0827 /* CDOpenALSupport.m */,
-				90F2D27013BB68EF00DC0827 /* CocosDenshion.h */,
-				90F2D27113BB68EF00DC0827 /* CocosDenshion.m */,
-				90F2D27213BB68EF00DC0827 /* SimpleAudioEngine.h */,
-				90F2D27313BB68EF00DC0827 /* SimpleAudioEngine.m */,
-			);
-			path = CocosDenshion;
 			sourceTree = "<group>";
 		};
 		90F2D28B13BB70A400DC0827 /* Sounds */ = {
@@ -544,11 +538,8 @@
 				90E7145B13B22C7C00BDE5B2 /* MenuView.m in Sources */,
 				90E9049913B2FD5B0055FBF0 /* ColorSchemeManager.m in Sources */,
 				90E9049C13B2FE220055FBF0 /* ColorScheme.m in Sources */,
+				90CD743D1BEF24DB006D8E1F /* CircloAudioPlayer.m in Sources */,
 				90F1280A13B999DB0071C83B /* CircloConstants.m in Sources */,
-				90F2D27413BB68EF00DC0827 /* CDAudioManager.m in Sources */,
-				90F2D27513BB68EF00DC0827 /* CDOpenALSupport.m in Sources */,
-				90F2D27613BB68EF00DC0827 /* CocosDenshion.m in Sources */,
-				90F2D27713BB68EF00DC0827 /* SimpleAudioEngine.m in Sources */,
 				90F2D2CA13BB711600DC0827 /* SoundManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,9 +548,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90CD74401BEF251A006D8E1F /* AbstractCircle.m in Sources */,
+				90CD74481BEF251A006D8E1F /* SoundManager.m in Sources */,
 				90CD74221BEF1BC8006D8E1F /* ViewController.m in Sources */,
+				90CD74441BEF251A006D8E1F /* MenuView.m in Sources */,
+				90CD743E1BEF24E0006D8E1F /* CircloAudioPlayer.m in Sources */,
+				90CD74451BEF251A006D8E1F /* CircloViewController.m in Sources */,
+				90CD74421BEF251A006D8E1F /* PulseCircleView.m in Sources */,
+				90CD74461BEF251A006D8E1F /* LayoutManager.m in Sources */,
+				90CD74411BEF251A006D8E1F /* Circle.m in Sources */,
 				90CD741F1BEF1BC8006D8E1F /* AppDelegate.m in Sources */,
 				90CD741C1BEF1BC8006D8E1F /* main.m in Sources */,
+				90CD74491BEF251A006D8E1F /* CircloConstants.m in Sources */,
+				90CD74471BEF251A006D8E1F /* ColorSchemeManager.m in Sources */,
+				90CD74431BEF251A006D8E1F /* ReactiveCircleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,8 +585,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -626,8 +630,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Circlo_Prefix.pch;
@@ -682,6 +688,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -746,6 +753,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = Circlo_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -791,6 +799,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = Circlo_Prefix.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -833,6 +842,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = Circlo_Prefix.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -900,6 +910,7 @@
 				90CD742C1BEF1BC8006D8E1F /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Circlo" */ = {
 			isa = XCConfigurationList;

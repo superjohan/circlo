@@ -7,8 +7,7 @@
 //
 
 #import "SoundManager.h"
-#import "CocosDenshion.h"
-#import "SimpleAudioEngine.h"
+#import "CircloAudioPlayer.h"
 #import "CircloConstants.h"
 
 @implementation SoundManager
@@ -16,52 +15,52 @@
 + (void)loadSounds
 {
 	// hours
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-1.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-2.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-3.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-4.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-5.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-6.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-7.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-8.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-9.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-10.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-11.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"1-12.caf"];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-1.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-2.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-3.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-4.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-5.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-6.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-7.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-8.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-9.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-10.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-11.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-12.caf" multitrack:YES];
 
 	// am/pm
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"2-1.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"2-2.caf"];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"2-1.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"2-2.caf" multitrack:YES];
 
 	// minutes, first digit
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"3-1.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"3-2.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"3-3.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"3-4.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"3-5.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"3-6.caf"];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-1.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-2.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-3.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-4.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-5.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-6.caf" multitrack:YES];
 
 	// minutes, second digit
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"4-1.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"4-2.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"4-3.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"4-4.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"4-5.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"4-6.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"4-7.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"4-8.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"4-9.caf"];
-	[[SimpleAudioEngine sharedEngine] preloadEffect:@"4-10.caf"];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-1.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-2.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-3.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-4.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-5.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-6.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-7.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-8.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-9.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-10.caf" multitrack:YES];
 	
 	// background sound
-	[[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"bg.m4a"];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"bg.m4a" multitrack:NO];
 }
 
 + (void)playSound:(CircloSoundType)soundType number:(NSInteger)number
 {
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsSoundEnabled])
 	{
-		[[SimpleAudioEngine sharedEngine] playEffect:[NSString stringWithFormat:@"%ld-%ld.caf", soundType, number]];
+		[[CircloAudioPlayer sharedPlayer] playSound:[NSString stringWithFormat:@"%ld-%ld.caf", (long)soundType, (long)number] loop:NO];
 	}
 }
 
@@ -84,11 +83,11 @@
 {
 	if ([[self class] soundOn])
 	{
-		[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"bg.m4a" loop:YES];
+		[[CircloAudioPlayer sharedPlayer] playSound:@"bg.m4a" loop:YES];
 	}
 	else
 	{
-		[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+		[[CircloAudioPlayer sharedPlayer] stopSound:@"bg.m4a"];
 	}
 }
 
@@ -102,7 +101,7 @@
 	double firstDecimal = (double)hours / 12.0;
 	double secondDecimal = (hours < 12) ? ((double)minutes / 60.0) / 10.0 : 0;
 	
-	[SimpleAudioEngine sharedEngine].backgroundMusicVolume = (firstDecimal + secondDecimal);
+	[[CircloAudioPlayer sharedPlayer] setVolume:(firstDecimal + secondDecimal) forSound:@"bg.m4a"];
 }
 
 @end

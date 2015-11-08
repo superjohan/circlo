@@ -40,7 +40,7 @@ static const NSInteger kPMTag = 14;
 {
 	if (tag < kMaxHoursTag)
 	{
-		return [NSString stringWithFormat:@"%ld", kMaxHoursTag - tag];
+		return [NSString stringWithFormat:@"%ld", (long)kMaxHoursTag - tag];
 	}
 	
 	if (tag == kAMTag)
@@ -53,7 +53,7 @@ static const NSInteger kPMTag = 14;
 		return NSLocalizedString(@"PM", nil);
 	}
 	
-	return [NSString stringWithFormat:@"%ld", tag];
+	return [NSString stringWithFormat:@"%ld", (long)tag];
 }
 
 - (void)_layoutHours:(NSInteger)hrs
