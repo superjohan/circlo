@@ -9,9 +9,9 @@
 #import "AbstractCircle.h"
 
 @interface AbstractCircle ()
-@property (nonatomic, assign) NSTimeInterval currentTime;
-@property (nonatomic, assign) BOOL animating;
-@property (nonatomic, assign) CGPoint startPoint;
+@property (nonatomic) NSTimeInterval currentTime;
+@property (nonatomic) BOOL animating;
+@property (nonatomic) CGPoint startPoint;
 @end
 
 @implementation AbstractCircle

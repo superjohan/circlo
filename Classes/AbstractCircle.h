@@ -10,13 +10,13 @@
 
 @interface AbstractCircle : UIView
 
-@property (nonatomic, assign) CGPoint savedCenter;
-@property (nonatomic, assign) CGRect savedFrame;
-@property (nonatomic, strong) UIColor *color;
+@property (nonatomic) CGPoint savedCenter;
+@property (nonatomic) CGRect savedFrame;
+@property (nonatomic) UIColor *color;
 
 // for manual animation
-@property (nonatomic, assign) CGPoint destinationPoint;
-@property (nonatomic, assign) NSTimeInterval animationDuration;
+@property (nonatomic) CGPoint destinationPoint;
+@property (nonatomic) NSTimeInterval animationDuration;
 
 - (void)animateToPoint:(CGPoint)point withDuration:(NSTimeInterval)duration;
 - (void)moveCircleWithDelta:(NSTimeInterval)delta;

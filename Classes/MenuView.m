@@ -13,14 +13,14 @@
 #import "SoundManager.h"
 
 @interface MenuView ()
-@property (nonatomic, strong) PulseCircleView *colorCircle1;
-@property (nonatomic, strong) PulseCircleView *colorCircle2;
-@property (nonatomic, strong) PulseCircleView *colorCircle3;
-@property (nonatomic, strong) PulseCircleView *colorCircle4;
-@property (nonatomic, strong) PulseCircleView *colorCircle5;
-@property (nonatomic, strong) PulseCircleView *soundCircle;
-@property (nonatomic, strong) UIButton *overlayButton;
-@property (nonatomic, strong) PulseCircleView *backgroundCircle;
+@property (nonatomic) PulseCircleView *colorCircle1;
+@property (nonatomic) PulseCircleView *colorCircle2;
+@property (nonatomic) PulseCircleView *colorCircle3;
+@property (nonatomic) PulseCircleView *colorCircle4;
+@property (nonatomic) PulseCircleView *colorCircle5;
+@property (nonatomic) PulseCircleView *soundCircle;
+@property (nonatomic) UIButton *overlayButton;
+@property (nonatomic) PulseCircleView *backgroundCircle;
 @end
 
 @implementation MenuView

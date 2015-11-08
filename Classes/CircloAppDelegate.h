@@ -12,8 +12,8 @@
 
 @interface CircloAppDelegate : NSObject <UIApplicationDelegate> 
 
-@property (nonatomic, strong) IBOutlet UIWindow *window;
-@property (nonatomic, strong) IBOutlet CircloViewController *viewController;
+@property (nonatomic) IBOutlet UIWindow *window;
+@property (nonatomic) IBOutlet CircloViewController *viewController;
 
 @end
 

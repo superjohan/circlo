@@ -12,14 +12,14 @@
 
 @interface PulseCircleView : AbstractCircle 
 
-@property (nonatomic, assign) NSTimeInterval frequency;
-@property (nonatomic, assign) NSInteger amplitude;
+@property (nonatomic) NSTimeInterval frequency;
+@property (nonatomic) NSInteger amplitude;
 @property (nonatomic, weak) id delegate;
-@property (nonatomic, assign) BOOL circleHidden;
-@property (nonatomic, strong) UIColor *textColor;
-@property (nonatomic, assign) CircloSoundType soundType;
-@property (nonatomic, assign) NSInteger soundNumber;
-@property (nonatomic, assign) BOOL selected;
+@property (nonatomic) BOOL circleHidden;
+@property (nonatomic) UIColor *textColor;
+@property (nonatomic) CircloSoundType soundType;
+@property (nonatomic) NSInteger soundNumber;
+@property (nonatomic) BOOL selected;
 
 - (id)initWithFrame:(CGRect)frame title:(NSString *)titleText button:(BOOL)button;
 - (void)startAnimation;

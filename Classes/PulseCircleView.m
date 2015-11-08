@@ -11,13 +11,13 @@
 #import "CircloConstants.h"
 
 @interface PulseCircleView ()
-@property (nonatomic, strong) Circle *circle1;
-@property (nonatomic, strong) Circle *circle2;
-@property (nonatomic, strong) Circle *circle3;
-@property (nonatomic, strong) Circle *circle4;
-@property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic, assign) CGSize circleSize;
-@property (nonatomic, strong) UIButton *button;
+@property (nonatomic) Circle *circle1;
+@property (nonatomic) Circle *circle2;
+@property (nonatomic) Circle *circle3;
+@property (nonatomic) Circle *circle4;
+@property (nonatomic) NSTimer *timer;
+@property (nonatomic) CGSize circleSize;
+@property (nonatomic) UIButton *button;
 @end
 
 @implementation PulseCircleView

@@ -16,14 +16,14 @@
 #import "SoundManager.h"
 
 @interface CircloViewController ()
-@property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic, assign) NSInteger hours;
-@property (nonatomic, assign) NSInteger minutes;
-@property (nonatomic, strong) ReactiveCircleView *reactiveCircleView;
-@property (nonatomic, strong) MenuView *menuView;
-@property (nonatomic, strong) ColorScheme *colorScheme;
-@property (nonatomic, strong) NSDateFormatter *hourFormatter;
-@property (nonatomic, strong) NSDateFormatter *minuteFormatter;
+@property (nonatomic) NSTimer *timer;
+@property (nonatomic) NSInteger hours;
+@property (nonatomic) NSInteger minutes;
+@property (nonatomic) ReactiveCircleView *reactiveCircleView;
+@property (nonatomic) MenuView *menuView;
+@property (nonatomic) ColorScheme *colorScheme;
+@property (nonatomic) NSDateFormatter *hourFormatter;
+@property (nonatomic) NSDateFormatter *minuteFormatter;
 @end
 
 @implementation CircloViewController
