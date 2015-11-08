@@ -11,7 +11,7 @@
 @interface CircloAudioPlayer : NSObject
 
 + (instancetype)sharedPlayer;
-- (void)loadSound:(NSString *)filename;
+- (void)loadSound:(NSString *)filename multitrack:(BOOL)multitrack;
 - (void)playSound:(NSString *)filename loop:(BOOL)loop;
 - (void)stopSound:(NSString *)filename;
 - (void)setVolume:(float)volume forSound:(NSString *)filename;

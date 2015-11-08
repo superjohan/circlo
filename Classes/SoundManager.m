@@ -15,45 +15,45 @@
 + (void)loadSounds
 {
 	// hours
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-1.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-2.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-3.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-4.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-5.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-6.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-7.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-8.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-9.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-10.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-11.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-12.caf"];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-1.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-2.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-3.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-4.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-5.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-6.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-7.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-8.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-9.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-10.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-11.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"1-12.caf" multitrack:YES];
 
 	// am/pm
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"2-1.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"2-2.caf"];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"2-1.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"2-2.caf" multitrack:YES];
 
 	// minutes, first digit
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-1.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-2.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-3.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-4.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-5.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-6.caf"];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-1.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-2.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-3.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-4.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-5.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"3-6.caf" multitrack:YES];
 
 	// minutes, second digit
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-1.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-2.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-3.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-4.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-5.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-6.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-7.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-8.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-9.caf"];
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-10.caf"];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-1.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-2.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-3.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-4.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-5.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-6.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-7.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-8.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-9.caf" multitrack:YES];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"4-10.caf" multitrack:YES];
 	
 	// background sound
-	[[CircloAudioPlayer sharedPlayer] loadSound:@"bg.m4a"];
+	[[CircloAudioPlayer sharedPlayer] loadSound:@"bg.m4a" multitrack:NO];
 }
 
 + (void)playSound:(CircloSoundType)soundType number:(NSInteger)number

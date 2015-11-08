@@ -11,7 +11,7 @@
 #import "CircloAudioPlayer.h"
 
 @interface CircloAudioPlayer ()
-@property (nonatomic) NSMutableDictionary *players;
+@property (nonatomic) NSMutableDictionary<NSString *, NSArray<AVAudioPlayer *> *> *players;
 @end
 
 @implementation CircloAudioPlayer
@@ -40,6 +40,47 @@
 	return [[NSBundle mainBundle] URLForResource:components[0] withExtension:components[1]];
 }
 
+- (AVAudioPlayer *)_audioPlayerForURL:(NSURL *)url
+{
+	NSError *error = nil;
+	AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	if (audioPlayer == nil)
+	{
+		NSLog(@"%@", error);
+		
+		return nil;
+	}
+	
+	return audioPlayer;
+}
+
+- (AVAudioPlayer *)_freePlayerForFilename:(NSString *)filename
+{
+	AVAudioPlayer *player = nil;
+	NSArray *players = self.players[filename];
+	
+	for (AVAudioPlayer *audioPlayer in players)
+	{
+		if (audioPlayer.playing == NO)
+		{
+			player = audioPlayer;
+			break;
+		}
+	}
+	
+	return player;
+}
+
+- (void)_performBlockOnAudioPlayers:(NSString *)filename block:(void (^)(AVAudioPlayer *))block
+{
+	NSArray *players = self.players[filename];
+	
+	for (AVAudioPlayer *player in players)
+	{
+		block(player);
+	}
+}
+
 #pragma mark - Public
 
 + (instancetype)sharedPlayer
@@ -63,7 +104,7 @@
 	return self;
 }
 
-- (void)loadSound:(NSString *)filename
+- (void)loadSound:(NSString *)filename multitrack:(BOOL)multitrack
 {
 	if (self.players[filename] != nil)
 	{
@@ -72,29 +113,31 @@
 		return;
 	}
 	
-	NSError *error = nil;
-	AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[self _urlForFilename:filename] error:&error];
-	if (audioPlayer == nil)
+	NSMutableArray *players = [NSMutableArray array];
+	NSInteger playerCount = multitrack ? 3 : 1;
+	NSURL *url = [self _urlForFilename:filename];
+	
+	for (NSInteger i = 0; i < playerCount; i++)
 	{
-		NSLog(@"%@", error);
-
-		return;
+		AVAudioPlayer *player = [self _audioPlayerForURL:url];
+		[players addObject:player];
 	}
 	
-	self.players[filename] = audioPlayer;
+	self.players[filename] = players;
 }
 
 - (void)playSound:(NSString *)filename loop:(BOOL)loop
 {
-	AVAudioPlayer *audioPlayer = self.players[filename];
+	AVAudioPlayer *audioPlayer = [self _freePlayerForFilename:filename];
 	if (audioPlayer == nil)
 	{
-		[self loadSound:filename];
+		[self loadSound:filename multitrack:YES];
 	}
 
 	if (audioPlayer.playing)
 	{
 		[audioPlayer stop];
+		audioPlayer.currentTime = 0;
 	}
 	
 	[audioPlayer prepareToPlay];
@@ -109,28 +152,16 @@
 
 - (void)stopSound:(NSString *)filename
 {
-	AVAudioPlayer *audioPlayer = self.players[filename];
-	if (audioPlayer == nil)
-	{
-		NSLog(@"No sound to stop.");
-		
-		return;
-	}
-	
-	[audioPlayer stop];
+	[self _performBlockOnAudioPlayers:filename block:^(AVAudioPlayer *player) {
+		[player stop];
+	}];
 }
 
 - (void)setVolume:(float)volume forSound:(NSString *)filename
 {
-	AVAudioPlayer *audioPlayer = self.players[filename];
-	if (audioPlayer == nil)
-	{
-		NSLog(@"No sound to set the volume for.");
-		
-		return;
-	}
-	
-	audioPlayer.volume = volume;
+	[self _performBlockOnAudioPlayers:filename block:^(AVAudioPlayer *player) {
+		player.volume = volume;
+	}];
 }
 
 @end
