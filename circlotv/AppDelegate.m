@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CircloConstants.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,19 @@
 
 @implementation AppDelegate
 
+- (void)_createUserDefaults
+{
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsAppHasLaunchedBefore] == NO)
+	{
+		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:kCircloUserDefaultsAppHasLaunchedBefore];
+		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:kCircloUserDefaultsSoundEnabled];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+	}
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	// Override point for customization after application launch.
+	[self _createUserDefaults];
+	
 	return YES;
 }
 
