@@ -21,6 +21,11 @@
 		9063BE5A139B763600DC6E84 /* ReactiveCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9063BE59139B763600DC6E84 /* ReactiveCircleView.m */; };
 		90A385A71372630000D25965 /* PulseCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A385A61372630000D25965 /* PulseCircleView.m */; };
 		90CD74131BEF156E006D8E1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90CD74121BEF156E006D8E1F /* Images.xcassets */; };
+		90CD741C1BEF1BC8006D8E1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CD741B1BEF1BC8006D8E1F /* main.m */; };
+		90CD741F1BEF1BC8006D8E1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CD741E1BEF1BC8006D8E1F /* AppDelegate.m */; };
+		90CD74221BEF1BC8006D8E1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CD74211BEF1BC8006D8E1F /* ViewController.m */; };
+		90CD74251BEF1BC8006D8E1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90CD74231BEF1BC8006D8E1F /* Main.storyboard */; };
+		90CD74271BEF1BC8006D8E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90CD74261BEF1BC8006D8E1F /* Assets.xcassets */; };
 		90E064B913A871B400E7F1E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E064B813A871B400E7F1E6 /* QuartzCore.framework */; };
 		90E21751139E6E7E00621116 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21750139E6E7E00621116 /* Circle.m */; };
 		90E21754139E714300621116 /* AbstractCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E21753139E714300621116 /* AbstractCircle.m */; };
@@ -71,8 +76,8 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* CircloAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircloAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* CircloAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircloAppDelegate.m; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* CircloAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircloAppDelegate.h; path = Classes/CircloAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* CircloAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircloAppDelegate.m; path = Classes/CircloAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Circlo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circlo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,7 +87,7 @@
 		28D7ACF70DDB3853001CB0EB /* CircloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircloViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Circlo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circlo_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Circlo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Circlo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Circlo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Circlo-Info.plist"; path = "Resources/Circlo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		90091B7F1377151C000E3143 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		90091B9013771588000E3143 /* LayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutManager.h; sourceTree = "<group>"; };
 		90091B9113771588000E3143 /* LayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutManager.m; sourceTree = "<group>"; };
@@ -92,6 +97,15 @@
 		90A385A51372630000D25965 /* PulseCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseCircleView.h; sourceTree = "<group>"; };
 		90A385A61372630000D25965 /* PulseCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseCircleView.m; sourceTree = "<group>"; };
 		90CD74121BEF156E006D8E1F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Circlo/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		90CD74181BEF1BC8006D8E1F /* circlotv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = circlotv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90CD741B1BEF1BC8006D8E1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		90CD741D1BEF1BC8006D8E1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		90CD741E1BEF1BC8006D8E1F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		90CD74201BEF1BC8006D8E1F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		90CD74211BEF1BC8006D8E1F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		90CD74241BEF1BC8006D8E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90CD74261BEF1BC8006D8E1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90CD74281BEF1BC8006D8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90E064B813A871B400E7F1E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		90E2174F139E6E7E00621116 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
 		90E21750139E6E7E00621116 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
@@ -103,9 +117,9 @@
 		90E9049813B2FD5B0055FBF0 /* ColorSchemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSchemeManager.m; sourceTree = "<group>"; };
 		90E9049A13B2FE220055FBF0 /* ColorScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorScheme.h; sourceTree = "<group>"; };
 		90E9049B13B2FE220055FBF0 /* ColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorScheme.m; sourceTree = "<group>"; };
-		90F1280613B997530071C83B /* Sniglet_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sniglet_Regular.ttf; sourceTree = "<group>"; };
-		90F1280813B999DB0071C83B /* CircloConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircloConstants.h; sourceTree = "<group>"; };
-		90F1280913B999DB0071C83B /* CircloConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircloConstants.m; sourceTree = "<group>"; };
+		90F1280613B997530071C83B /* Sniglet_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sniglet_Regular.ttf; path = Resources/Sniglet_Regular.ttf; sourceTree = "<group>"; };
+		90F1280813B999DB0071C83B /* CircloConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircloConstants.h; path = Classes/CircloConstants.h; sourceTree = "<group>"; };
+		90F1280913B999DB0071C83B /* CircloConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircloConstants.m; path = Classes/CircloConstants.m; sourceTree = "<group>"; };
 		90F2D26B13BB68EF00DC0827 /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
 		90F2D26C13BB68EF00DC0827 /* CDAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAudioManager.m; sourceTree = "<group>"; };
 		90F2D26D13BB68EF00DC0827 /* CDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConfig.h; sourceTree = "<group>"; };
@@ -169,28 +183,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		90CD74151BEF1BC8006D8E1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				90E9049D13B2FE270055FBF0 /* Model */,
-				90D3FE7E13B0DFF900422A56 /* Views */,
-				90D3FE7F13B0E02500422A56 /* View controllers */,
-				90E9049613B2FD3F0055FBF0 /* Helpers */,
-				1D3623240D0F684500981E51 /* CircloAppDelegate.h */,
-				1D3623250D0F684500981E51 /* CircloAppDelegate.m */,
-				90F1280813B999DB0071C83B /* CircloConstants.h */,
-				90F1280913B999DB0071C83B /* CircloConstants.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* Circlo.app */,
+				90CD74181BEF1BC8006D8E1F /* circlotv.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,35 +205,12 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				90F2D26A13BB68EF00DC0827 /* CocosDenshion */,
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
+				90CD742D1BEF1BE6006D8E1F /* circlo */,
+				90CD74191BEF1BC8006D8E1F /* circlotv */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
 			name = CustomTemplate;
-			sourceTree = "<group>";
-		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				32CA4F630368D1EE00C91783 /* Circlo_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				90CD74121BEF156E006D8E1F /* Images.xcassets */,
-				90B571241491561D00C70A04 /* XIBs */,
-				90F2D28B13BB70A400DC0827 /* Sounds */,
-				90F1280613B997530071C83B /* Sniglet_Regular.ttf */,
-				8D1107310486CEB800E47090 /* Circlo-Info.plist */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
@@ -252,7 +236,62 @@
 				2899E5210DE3E06400AC0155 /* CircloViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 			);
-			path = XIBs;
+			name = XIBs;
+			path = Resources/XIBs;
+			sourceTree = "<group>";
+		};
+		90CD74191BEF1BC8006D8E1F /* circlotv */ = {
+			isa = PBXGroup;
+			children = (
+				90CD741D1BEF1BC8006D8E1F /* AppDelegate.h */,
+				90CD741E1BEF1BC8006D8E1F /* AppDelegate.m */,
+				90CD74201BEF1BC8006D8E1F /* ViewController.h */,
+				90CD74211BEF1BC8006D8E1F /* ViewController.m */,
+				90CD74231BEF1BC8006D8E1F /* Main.storyboard */,
+				90CD74261BEF1BC8006D8E1F /* Assets.xcassets */,
+				90CD74281BEF1BC8006D8E1F /* Info.plist */,
+				90CD741A1BEF1BC8006D8E1F /* Supporting Files */,
+			);
+			path = circlotv;
+			sourceTree = "<group>";
+		};
+		90CD741A1BEF1BC8006D8E1F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90CD741B1BEF1BC8006D8E1F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90CD742D1BEF1BE6006D8E1F /* circlo */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D26A13BB68EF00DC0827 /* CocosDenshion */,
+				90E9049D13B2FE270055FBF0 /* Model */,
+				90D3FE7E13B0DFF900422A56 /* Views */,
+				90D3FE7F13B0E02500422A56 /* View controllers */,
+				90E9049613B2FD3F0055FBF0 /* Helpers */,
+				1D3623240D0F684500981E51 /* CircloAppDelegate.h */,
+				1D3623250D0F684500981E51 /* CircloAppDelegate.m */,
+				90F1280813B999DB0071C83B /* CircloConstants.h */,
+				90F1280913B999DB0071C83B /* CircloConstants.m */,
+				8D1107310486CEB800E47090 /* Circlo-Info.plist */,
+				90CD74121BEF156E006D8E1F /* Images.xcassets */,
+				90CD742E1BEF1C14006D8E1F /* Supporting Files */,
+			);
+			name = circlo;
+			sourceTree = "<group>";
+		};
+		90CD742E1BEF1C14006D8E1F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Circlo_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				90B571241491561D00C70A04 /* XIBs */,
+				90F2D28B13BB70A400DC0827 /* Sounds */,
+				90F1280613B997530071C83B /* Sniglet_Regular.ttf */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		90D3FE7E13B0DFF900422A56 /* Views */ = {
@@ -270,6 +309,7 @@
 				90E7145A13B22C7C00BDE5B2 /* MenuView.m */,
 			);
 			name = Views;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		90D3FE7F13B0E02500422A56 /* View controllers */ = {
@@ -279,6 +319,7 @@
 				28D7ACF70DDB3853001CB0EB /* CircloViewController.m */,
 			);
 			name = "View controllers";
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		90E9049613B2FD3F0055FBF0 /* Helpers */ = {
@@ -292,6 +333,7 @@
 				90F2D2C913BB711600DC0827 /* SoundManager.m */,
 			);
 			name = Helpers;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		90E9049D13B2FE270055FBF0 /* Model */ = {
@@ -301,6 +343,7 @@
 				90E9049B13B2FE220055FBF0 /* ColorScheme.m */,
 			);
 			name = Model;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		90F2D26A13BB68EF00DC0827 /* CocosDenshion */ = {
@@ -354,7 +397,8 @@
 				90F2D2A813BB70BF00DC0827 /* 4-9.caf */,
 				90F2D2A913BB70BF00DC0827 /* 4-10.caf */,
 			);
-			path = Sounds;
+			name = Sounds;
+			path = Resources/Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +421,23 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* Circlo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		90CD74171BEF1BC8006D8E1F /* circlotv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90CD74291BEF1BC8006D8E1F /* Build configuration list for PBXNativeTarget "circlotv" */;
+			buildPhases = (
+				90CD74141BEF1BC8006D8E1F /* Sources */,
+				90CD74151BEF1BC8006D8E1F /* Frameworks */,
+				90CD74161BEF1BC8006D8E1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = circlotv;
+			productName = circlotv;
+			productReference = 90CD74181BEF1BC8006D8E1F /* circlotv.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -385,6 +446,11 @@
 			attributes = {
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Aero Deko";
+				TargetAttributes = {
+					90CD74171BEF1BC8006D8E1F = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Circlo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -395,12 +461,14 @@
 				Japanese,
 				French,
 				German,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Circlo */,
+				90CD74171BEF1BC8006D8E1F /* circlotv */,
 			);
 		};
 /* End PBXProject section */
@@ -449,6 +517,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		90CD74161BEF1BC8006D8E1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90CD74271BEF1BC8006D8E1F /* Assets.xcassets in Resources */,
+				90CD74251BEF1BC8006D8E1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -476,7 +553,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		90CD74141BEF1BC8006D8E1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90CD74221BEF1BC8006D8E1F /* ViewController.m in Sources */,
+				90CD741F1BEF1BC8006D8E1F /* AppDelegate.m in Sources */,
+				90CD741C1BEF1BC8006D8E1F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		90CD74231BEF1BC8006D8E1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90CD74241BEF1BC8006D8E1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -622,6 +720,136 @@
 			};
 			name = Distribution;
 		};
+		90CD742A1BEF1BC8006D8E1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = circlotv/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aerodeko.circlotv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		90CD742B1BEF1BC8006D8E1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = circlotv/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aerodeko.circlotv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90CD742C1BEF1BC8006D8E1F /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = circlotv/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aerodeko.circlotv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -663,6 +891,15 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		90CD74291BEF1BC8006D8E1F /* Build configuration list for PBXNativeTarget "circlotv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90CD742A1BEF1BC8006D8E1F /* Debug */,
+				90CD742B1BEF1BC8006D8E1F /* Release */,
+				90CD742C1BEF1BC8006D8E1F /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Circlo" */ = {
 			isa = XCConfigurationList;
