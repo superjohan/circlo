@@ -19,27 +19,11 @@
 
 + (void)createClockLayoutInView:(UIView *)view
 {
-	CGFloat iPhoneCircleSize = 56.0;
-	CGFloat iPadCircleSize = 130.0;
-	CGFloat tvCircleSize = 150.0;
-	CGFloat circleSize = 0;
-	
-	if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
-	{
-		circleSize = iPadCircleSize;
-	}
-	else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomTV)
-	{
-		circleSize = tvCircleSize;
-	}
-	else
-	{
-		circleSize = iPhoneCircleSize;
-	}
-	
+	CGFloat length = MIN(view.bounds.size.width, view.bounds.size.height);
+	CGFloat circleSize = floor(length / 6.0);
 	CGFloat xPadding = (view.bounds.size.width - (5 * circleSize)) / 2.0;
 	CGFloat yPadding = (view.bounds.size.height - (6 * circleSize)) / 2.0;
-	CGFloat amplitude = (circleSize / iPhoneCircleSize) * 10;
+	CGFloat amplitude = (circleSize / 6.0);
 	
 	NSInteger tagCounter = 1;
 	
