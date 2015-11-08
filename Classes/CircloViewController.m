@@ -53,7 +53,7 @@ static const NSInteger kPMTag = 14;
 		return NSLocalizedString(@"PM", nil);
 	}
 	
-	return [NSString stringWithFormat:@"%ld", tag];
+	return [NSString stringWithFormat:@"%ld", (long)tag];
 }
 
 - (void)_layoutHours:(NSInteger)hrs
