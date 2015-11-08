@@ -21,11 +21,16 @@
 {
 	CGFloat iPhoneCircleSize = 56.0;
 	CGFloat iPadCircleSize = 130.0;
+	CGFloat tvCircleSize = 150.0;
 	CGFloat circleSize = 0;
 	
 	if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
 	{
 		circleSize = iPadCircleSize;
+	}
+	else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomTV)
+	{
+		circleSize = tvCircleSize;
 	}
 	else
 	{
