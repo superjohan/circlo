@@ -60,7 +60,7 @@
 + (void)playSound:(CircloSoundType)soundType number:(NSInteger)number
 {
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsSoundEnabled])
-		[[SimpleAudioEngine sharedEngine] playEffect:[NSString stringWithFormat:@"%d-%d.caf", soundType, number]];
+		[[SimpleAudioEngine sharedEngine] playEffect:[NSString stringWithFormat:@"%d-%ld.caf", soundType, number]];
 }
 
 + (void)toggleSound

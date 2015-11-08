@@ -39,7 +39,7 @@ static const NSInteger kPMTag = 14;
 - (NSString *)_buttonTextForTag:(NSInteger)tag
 {
 	if (tag < kMaxHoursTag)
-		return [NSString stringWithFormat:@"%d", kMaxHoursTag - tag];
+		return [NSString stringWithFormat:@"%ld", kMaxHoursTag - tag];
 	
 	if (tag == kAMTag)
 		return NSLocalizedString(@"AM", nil);
@@ -47,7 +47,7 @@ static const NSInteger kPMTag = 14;
 	if (tag == kPMTag)
 		return NSLocalizedString(@"PM", nil);
 	
-	return [NSString stringWithFormat:@"%d", tag];
+	return [NSString stringWithFormat:@"%ld", tag];
 }
 
 - (void)_layoutHours:(NSInteger)hrs
