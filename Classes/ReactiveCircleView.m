@@ -30,17 +30,6 @@
 	return c;
 }
 
-- (NSTimeInterval)_durationFromPoint:(CGPoint)originPoint toPoint:(CGPoint)destinationPoint
-{
-	//
-	// this calculation is saved for posterity because it's pretty good but i like the current one better
-	//
-	//CGFloat maxDistance = self.frame.size.width / 2.0;
-	//return 1.5 - ([self _distanceFromPoint:originPoint toPoint:destinationPoint] / maxDistance);
-
-	return 1;	
-}
-
 - (void)_moveCircle:(AbstractCircle *)circle inReactionToPoint:(CGPoint)point
 {
 	CGFloat length = MIN(self.frame.size.width, self.frame.size.height);
