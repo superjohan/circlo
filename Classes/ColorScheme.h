@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum
+typedef NS_ENUM(NSInteger, CircloColorSchemeType)
 {
-	kColorSchemeNone = 0,
-	kColorScheme1,
-	kColorScheme2,
-	kColorScheme3,
-	kColorScheme4,
-	kColorScheme5,
-	kColorSchemeMax
-} CircloColorSchemeType;
+	CircloColorSchemeNone = 0,
+	CircloColorScheme1,
+	CircloColorScheme2,
+	CircloColorScheme3,
+	CircloColorScheme4,
+	CircloColorScheme5,
+	CircloColorSchemeMax
+};
 
 @interface ColorScheme : NSObject
 

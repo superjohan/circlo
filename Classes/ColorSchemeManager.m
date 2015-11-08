@@ -25,8 +25,8 @@
 {	
 	CircloColorSchemeType schemeType = [[NSUserDefaults standardUserDefaults] integerForKey:kCircloUserDefaultsColorScheme];
 	
-	if (schemeType == kColorSchemeNone || schemeType >= kColorSchemeMax)
-		return [[self class] changeToColorScheme:kColorScheme1];
+	if (schemeType == CircloColorSchemeNone || schemeType >= CircloColorSchemeMax)
+		return [[self class] changeToColorScheme:CircloColorScheme1];
 	else
 		return [[ColorScheme alloc] initWithColorScheme:schemeType];
 }

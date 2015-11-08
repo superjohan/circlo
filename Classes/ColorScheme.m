@@ -20,19 +20,19 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 {
 	switch(schemeType) 
 	{
-		case kColorScheme1:
+		case CircloColorScheme1:
 			return [UIColor colorWithRed:(255.0 / 255.0) green:(0 / 255.0) blue:(128.0 / 255.0) alpha:1];
 			break;
-		case kColorScheme2:
+		case CircloColorScheme2:
 			return [UIColor colorWithRed:(0 / 255.0) green:(0 / 255.0) blue:(0 / 255.0) alpha:1];
 			break;
-		case kColorScheme3:
+		case CircloColorScheme3:
 			return [UIColor colorWithRed:(254.0 / 255.0) green:(176.0 / 255.0) blue:(140.0 / 255.0) alpha:1];
 			break;
-		case kColorScheme4:
+		case CircloColorScheme4:
 			return [UIColor colorWithRed:(254.0 / 255.0) green:(189.0 / 255.0) blue:(234.0 / 255.0) alpha:1];
 			break;
-		case kColorScheme5:
+		case CircloColorScheme5:
 			return [UIColor colorWithRed:(75.0 / 255.0) green:(207.0 / 255.0) blue:(190.0 / 255.0) alpha:1];
 			break;
 		default:
@@ -46,19 +46,19 @@ NSString * const kColorSchemeSecondaryColorKey = @"kColorSchemeSecondaryColorKey
 {
 	switch(schemeType) 
 	{
-		case kColorScheme1:
+		case CircloColorScheme1:
 			return [UIColor colorWithRed:(255.0 / 255.0) green:(255.0 / 255.0) blue:(0 / 255.0) alpha:1];
 			break;
-		case kColorScheme2:
+		case CircloColorScheme2:
 			return [UIColor colorWithRed:(254.0 / 255.0) green:(176.0 / 255.0) blue:(140.0 / 255.0) alpha:1];
 			break;
-		case kColorScheme3:
+		case CircloColorScheme3:
 			return [UIColor colorWithRed:(255.0 / 255.0) green:(218.0 / 255.0) blue:(211.0 / 255.0) alpha:1];
 			break;
-		case kColorScheme4:
+		case CircloColorScheme4:
 			return [UIColor colorWithRed:(107.0 / 255.0) green:(147.0 / 255.0) blue:(253.0 / 255.0) alpha:1];
 			break;
-		case kColorScheme5:
+		case CircloColorScheme5:
 			return [UIColor colorWithRed:(255.0 / 255.0) green:(236.0 / 255.0) blue:(217.0 / 255.0) alpha:1];
 			break;
 		default:
