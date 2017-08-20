@@ -46,7 +46,7 @@
 	AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
 	if (audioPlayer == nil)
 	{
-		NSLog(@"%@", error);
+		NSLog(@"%@ %@", url, error);
 		
 		return nil;
 	}
