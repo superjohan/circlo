@@ -58,6 +58,12 @@
 
 + (void)playSound:(CircloSoundType)soundType number:(NSInteger)number
 {
+    if (soundType == 0 || number == 0)
+    {
+        // neither of these are valid, so just ignore
+        return;
+    }
+    
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:kCircloUserDefaultsSoundEnabled])
 	{
 		[[CircloAudioPlayer sharedPlayer] playSound:[NSString stringWithFormat:@"%ld-%ld.caf", (long)soundType, (long)number] loop:NO];
