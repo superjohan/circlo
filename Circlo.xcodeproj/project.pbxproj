@@ -17,6 +17,7 @@
 		28D7ACF80DDB3853001CB0EB /* CircloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* CircloViewController.m */; };
 		90091B801377151C000E3143 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90091B7F1377151C000E3143 /* MainWindow-iPad.xib */; };
 		90091B9213771588000E3143 /* LayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90091B9113771588000E3143 /* LayoutManager.m */; };
+		901E8BDB1F72D36A0077DA3A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901E8BDA1F72D36A0077DA3A /* Launch Screen.storyboard */; };
 		9052857E13C7291C0041EAD0 /* bg.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9052857D13C7291C0041EAD0 /* bg.m4a */; };
 		9063BE5A139B763600DC6E84 /* ReactiveCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9063BE59139B763600DC6E84 /* ReactiveCircleView.m */; };
 		90A385A71372630000D25965 /* PulseCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A385A61372630000D25965 /* PulseCircleView.m */; };
@@ -99,6 +100,7 @@
 		90091B7F1377151C000E3143 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		90091B9013771588000E3143 /* LayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutManager.h; sourceTree = "<group>"; };
 		90091B9113771588000E3143 /* LayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutManager.m; sourceTree = "<group>"; };
+		901E8BDA1F72D36A0077DA3A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9052857D13C7291C0041EAD0 /* bg.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg.m4a; sourceTree = "<group>"; };
 		9063BE58139B763600DC6E84 /* ReactiveCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactiveCircleView.h; sourceTree = "<group>"; };
 		9063BE59139B763600DC6E84 /* ReactiveCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactiveCircleView.m; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				90B571241491561D00C70A04 /* XIBs */,
 				90F2D28B13BB70A400DC0827 /* Sounds */,
 				90F1280613B997530071C83B /* Sniglet_Regular.ttf */,
+				901E8BDA1F72D36A0077DA3A /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				90F2D2B713BB70BF00DC0827 /* 2-2.caf in Resources */,
 				90F2D2B813BB70BF00DC0827 /* 3-1.caf in Resources */,
 				90F2D2B913BB70BF00DC0827 /* 3-2.caf in Resources */,
+				901E8BDB1F72D36A0077DA3A /* Launch Screen.storyboard in Resources */,
 				90F2D2BA13BB70BF00DC0827 /* 3-3.caf in Resources */,
 				90F2D2BB13BB70BF00DC0827 /* 3-4.caf in Resources */,
 				90F2D2BC13BB70BF00DC0827 /* 3-5.caf in Resources */,
